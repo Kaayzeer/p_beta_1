@@ -12,18 +12,21 @@ const StyledUL = styled.ul`
 
 const StyledLi = styled.li`
   padding: 10px;
+  color: var(--sky-blue-crayola-2);
+  letter-spacing: 1px;
+  text-transform: uppercase;
   a {
     text-decoration: none;
   }
   a:link,
   a:visited {
-    color: black;
+    color: var(--sky-blue-crayola-2);
   }
   a:hover {
-    color: white;
+    color: var(--sky-blue-crayola-2);
   }
   a:active {
-    color: white;
+    color: var(--sky-blue-crayola-2);
   }
 `;
 

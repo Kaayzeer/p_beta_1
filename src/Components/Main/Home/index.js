@@ -1,34 +1,20 @@
 import React from "react";
-import { Checkbox } from "@material-ui/core";
+import styled from "styled-components";
 
-function Checkboxes() {
-  const [checked, setChecked] = React.useState(true);
-
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
-
-  return (
-    <div>
-      <Checkbox
-        checked={checked}
-        onChange={handleChange}
-        inputProps={{ "aria-label": "primary checkbox" }}
-      />
-      <Checkbox
-        defaultChecked
-        color="primary"
-        inputProps={{ "aria-label": "secondary checkbox" }}
-      />
-    </div>
-  );
-}
+const StyledHome = styled.main`
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 75vh;
+  background: linear-gradient(135deg, #90e0efff 0%, #e0aaffff 100%);
+`;
 
 function index() {
   return (
-    <>
-      <Checkboxes />
-    </>
+    <StyledHome>
+      <h1>ORALE</h1>
+    </StyledHome>
   );
 }
 

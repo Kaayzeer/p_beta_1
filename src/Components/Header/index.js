@@ -3,7 +3,7 @@ import Navigation from "./Navigation";
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
-  background-color: lavender;
+  background-color: var(--baby-powder);
 `;
 
 function Header() {
