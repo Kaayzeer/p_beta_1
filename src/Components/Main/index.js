@@ -3,16 +3,25 @@ import Contact from "./Contact";
 import Home from "./Home";
 import Projects from "./Projects";
 import About from "./About";
+import { Switch, Route } from "react-router-dom";
 
 function index() {
   return (
-    <div>
-      <h1>Main</h1>
-      <Home />
-      <About />
-      <Projects />
-      <Contact />
-    </div>
+    <Switch>
+      <Route exact path="/">
+        <h1>JALLA DAGS O GYYYM</h1>
+        <Home />
+      </Route>
+      <Route path="/about">
+        <About />
+      </Route>
+      <Route path="/contact">
+        <Contact />
+      </Route>
+      <Route path="/projects">
+        <Projects />
+      </Route>
+    </Switch>
   );
 }
 

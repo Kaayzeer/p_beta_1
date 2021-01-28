@@ -1,11 +1,12 @@
 import Components from "./Components/";
+import GlobalStyle from "./GlobalStyle";
 
 function App() {
   return (
-    <div className="App">
-      <h1>orale</h1>
+    <>
       <Components />
-    </div>
+      <GlobalStyle />
+    </>
   );
 }
 

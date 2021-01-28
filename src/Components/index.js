@@ -1,15 +1,15 @@
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function index() {
   return (
-    <div>
-      <h1>components</h1>
+    <Router>
       <Header />
       <Main />
       <Footer />
-    </div>
+    </Router>
   );
 }
 
