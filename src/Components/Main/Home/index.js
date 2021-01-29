@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "@material-ui/core/Button";
 
 const StyledHome = styled.main`
   padding: 10px;
@@ -61,6 +62,14 @@ function index() {
       <h1>Nikolas Rosinelli</h1>
       <p>Web Developer</p>
       <SmallLine></SmallLine>
+      <Button
+        style={{ backgroundColor: "transparent", color: "white" }}
+        Size="small"
+        onClick={() => alert("Skickas till mitt CV sen")}
+        variant="contained"
+      >
+        CV
+      </Button>
     </StyledHome>
   );
 }

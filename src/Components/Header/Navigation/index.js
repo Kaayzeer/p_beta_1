@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const StyledUL = styled.ul`
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
   list-style: none;
 `;
