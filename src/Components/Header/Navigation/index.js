@@ -12,7 +12,7 @@ const StyledUL = styled.ul`
 
 const StyledLi = styled.li`
   padding: 10px;
-  color: var(--sky-blue-crayola-2);
+  color: var(--dark-orchid);
   letter-spacing: 1px;
   text-transform: uppercase;
   a {
@@ -20,13 +20,13 @@ const StyledLi = styled.li`
   }
   a:link,
   a:visited {
-    color: var(--sky-blue-crayola-2);
+    color: var(--dark-orchid);
   }
   a:hover {
-    color: var(--sky-blue-crayola-2);
+    color: var(--dark-orchid);
   }
   a:active {
-    color: var(--sky-blue-crayola-2);
+    color: var(--dark-orchid);
   }
 `;
 

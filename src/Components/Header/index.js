@@ -9,7 +9,7 @@ const StyledHeader = styled.header`
 function Header() {
   return (
     <StyledHeader>
-      <h1>Header</h1>
+      <h1></h1>
       <Navigation />
     </StyledHeader>
   );

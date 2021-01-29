@@ -6,6 +6,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,200&display=swap');
+
     /* light mode */
 --navy-blue: #03045eff;
 --dark-cornflower-blue: #023e8aff;

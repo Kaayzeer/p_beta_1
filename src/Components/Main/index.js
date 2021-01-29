@@ -8,7 +8,7 @@ import styled from "styled-components";
 
 const StyledMain = styled.main`
   display: flex;
-  justify-content: center;
+  /*  justify-content: center; */
   width: 100%;
   min-height: 75vh;
   background: var(--baby-powder);
