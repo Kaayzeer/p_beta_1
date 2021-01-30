@@ -2,6 +2,9 @@ import React from "react";
 import myImage from "../../../Photos/Nikos_edited_00-6.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import Hidden from "@material-ui/core/Hidden";
+import withWidth from "@material-ui/core/withWidth";
+import Container from "@material-ui/core/Container";
 
 /* const StyledAbout = styled.main`
   display: flex;
@@ -111,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  card: {
+  paper: {
     padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.primary,
@@ -120,6 +123,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "2%",
     boxShadow: "1px 1px 5px 2px var(--light-gray)",
     width: "100%",
+    marginTop: "30px",
   },
   h1: {
     fontSize: "4rem",
@@ -129,11 +133,12 @@ const useStyles = makeStyles((theme) => ({
   },
 
   styledPara: {
-    margin: "10px",
-    marginLeft: "20px",
+    /*  margin: "10px",
+    marginLeft: "20px", */
     textAlign: "left",
     wordSpacing: "4px",
     fontSize: "16px",
+    maxWidth: "250px",
   },
   expH3: {
     marginBottom: "10px",
@@ -142,48 +147,74 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "2rem",
     textJustify: "center",
   },
+  expH1: {
+    marginBottom: "10px",
+    marginTop: "30px",
+    wordSpacing: "2px",
+    fontSize: "2.5rem",
+  },
   expPara: {
     marginTop: "10px",
     marginBottom: "10px",
     wordSpacing: "2px",
     fontSize: "1rem",
-    alignItems: "center",
-    justify: "center",
   },
+  stH1: {
+    borderBottom: "1px, black ",
+    marginBottom: "10px",
+    marginTop: "30px",
+    wordSpacing: "2px",
+    fontSize: "2.5rem",
+    paddingLeft: "10px",
+  },
+  stP: {
+    marginTop: "10px",
+    marginBottom: "10px",
+    wordSpacing: "2px",
+    fontSize: "1rem",
+    paddingLeft: "10px",
+  },
+  stH3: {
+    marginBottom: "10px",
+    marginTop: "30px",
+    wordSpacing: "1px",
+    fontSize: "2rem",
+    paddingLeft: "10px",
+  },
+
   styledCV: {},
 }));
 
 function Index() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <h1 className={classes.h1}>about me</h1>
-
-          <p className={classes.styledPara}>
-            Hey, I´m a Front-End Developer and I'm passionate about creating and
-            developing web interfaces. Always ready to learn new things and
-            expand my developing tools
-          </p>
-        </Grid>
-        <Grid container xs={12} align="center" justify="center">
-          <Grid item xs={3}>
+    <Container maxWidth="xl" direction="row" align="center" justify="center">
+      <div className={classes.root}>
+        <Grid container lg={12}>
+          <Grid item xs={12} lg={6} align="center" justify="space-between">
+            <h1 className={classes.h1}>about me</h1>
+            <p className={classes.styledPara}>
+              Hey, I´m a Front-End Developer and I'm passionate about creating
+              and developing web interfaces. Always ready to learn new things
+              and expand my developing tools
+            </p>
             <h3 className={classes.expH3}> 1 </h3>
             <p className={classes.expPara}>Year of experience</p>
             <h3 className={classes.expH3}> 3 </h3>
             <p className={classes.expPara}>Completed projects</p>
           </Grid>
+          <Grid container xs={12} lg={3}>
+            <img src={myImage} className={classes.img} alt="" />
+          </Grid>
+          <Grid item xs={6} direction="column" lg={6}>
+            <h1 className={classes.stH1}>experience</h1>
+            <h3 className={classes.stP}>front end developer</h3>
+            <p className={classes.stPara}>student</p>
+            <p className={classes.stPara}>September 2020 - June 2022</p>
+          </Grid>
         </Grid>
-        <Grid item xs={12}>
-          <img src={myImage} className={classes.img} alt="" />
-        </Grid>
-        <Grid item xs={3}></Grid>
-        <Grid item xs={3} lg={12}>
-          <Grid item xs={3} lg={12}></Grid>
-        </Grid>
-      </Grid>
-    </div>
+      </div>
+    </Container>
   );
 }
 
