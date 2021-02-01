@@ -1,6 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core/styles";
+import SpaRoundedIcon from "@material-ui/icons/SpaRounded";
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
+import Container from "@material-ui/core/Container";
+
+const useStyles = makeStyles((theme) => ({}));
 
 const StyledHome = styled.main`
   padding: 10px;
@@ -56,10 +63,12 @@ const SmallLine = styled.div`
 `;
 
 function index() {
+  const classes = useStyles;
   return (
     <StyledHome>
       <SmallLine></SmallLine>
       <h1>Nikolas Rosinelli</h1>
+      <SpaRoundedIcon />
       <p>Web Developer</p>
       <SmallLine></SmallLine>
       <Button

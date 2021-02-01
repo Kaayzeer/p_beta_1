@@ -2,9 +2,195 @@ import React from "react";
 import myImage from "../../../Photos/Nikos_edited_00-6.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import Hidden from "@material-ui/core/Hidden";
-import withWidth from "@material-ui/core/withWidth";
+import Paper from "@material-ui/core/Paper";
 import Container from "@material-ui/core/Container";
+import Box from "@material-ui/core/Box";
+import BusinessCenterRoundedIcon from "@material-ui/icons/BusinessCenterRounded";
+import AssignmentTurnedInRoundedIcon from "@material-ui/icons/AssignmentTurnedInRounded";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    color: theme.palette.text.primary,
+  },
+  AssignmentTurnedInRoundedIcon: {
+    margin: "5px",
+  },
+
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: "center",
+    color: theme.palette.text.primary,
+  },
+  img: {
+    borderRadius: "2%",
+    boxShadow: "1px 1px 5px 2px var(--light-gray)",
+    width: "100%",
+    marginTop: "30px",
+  },
+  h1: {
+    fontSize: "4rem",
+    marginBottom: "70px",
+    marginTop: "30px",
+    textAlign: "center",
+  },
+
+  styledPara: {
+    /*  margin: "10px",
+    marginLeft: "20px", */
+    textAlign: "center",
+    wordBreak: "break-word",
+    wordSpacing: "4px",
+    fontSize: "1.5rem",
+    maxWidth: "460px",
+  },
+  expH3: {
+    marginBottom: "10px",
+    marginTop: "30px",
+    wordSpacing: "2px",
+    fontSize: "2rem",
+    textJustify: "center",
+  },
+  expH1: {
+    marginBottom: "10px",
+    marginTop: "30px",
+    wordSpacing: "2px",
+    fontSize: "2.5rem",
+  },
+  expPara: {
+    marginTop: "10px",
+    marginBottom: "10px",
+    wordSpacing: "2px",
+    fontSize: "1.5rem",
+  },
+  stH1: {
+    borderBottom: "1px, black ",
+    marginBottom: "10px",
+    marginTop: "30px",
+    wordSpacing: "2px",
+    fontSize: "2.5rem",
+    paddingLeft: "10px",
+    textAlign: "center",
+  },
+  stP: {
+    marginTop: "10px",
+    marginBottom: "10px",
+    wordSpacing: "2px",
+    fontSize: "1.3rem",
+    paddingLeft: "10px",
+    textAlign: "center",
+  },
+  stPara: {
+    marginTop: "10px",
+    marginBottom: "10px",
+    wordSpacing: "2px",
+    fontSize: "1.3rem",
+    paddingLeft: "10px",
+    textAlign: "center",
+  },
+}));
+
+function Index() {
+  const classes = useStyles();
+  return (
+    <Container maxWidth="xl">
+      <div className={classes.root}>
+        <Grid container lg={12} direction="column" align="center">
+          <Grid container lg={12} direction="row" justify="space-evenly">
+            <Grid item xs={12} lg={6}>
+              <h1 className={classes.h1}>about me</h1>
+              <p className={classes.styledPara}>
+                Hey, I´m a Front-End Developer student who started to code after
+                I took a year off in my studies to be a physical education
+                teacher. That was the best decision ever! Since i first started
+                to code i can't leave the computer alone. I'm passionate about
+                creating and developing web interfaces. Always ready to learn
+                new things and expand my developing tools.
+              </p>
+              <h3 className={classes.expH3}> 1 </h3>
+              <p className={classes.expPara}>Year of experience</p>
+              <h3 className={classes.expH3}> 3 </h3>
+              <p className={classes.expPara}>Completed projects</p>
+            </Grid>
+
+            <Grid item xs={12} lg={3}>
+              <img src={myImage} className={classes.img} alt="" />
+            </Grid>
+          </Grid>
+          <Box mt={10}></Box>
+          <Grid container xs={12} lg={12} direction="row" justify="center">
+            <Grid item xs={12} md={6} direction="column" lg={6}>
+              <Paper className={classes.paper} elevation={3}>
+                <h1 className={classes.stH1}>
+                  <BusinessCenterRoundedIcon
+                    style={{
+                      color: "#9d4eddff",
+                    }}
+                  />
+                  studies
+                </h1>
+
+                <h3 className={classes.stP}>
+                  front end developer with ui/ux design
+                </h3>
+                <p className={classes.stPara}>student at the moment</p>
+                <p className={classes.stPara}>September 2020 - June 2022</p>
+              </Paper>
+            </Grid>
+
+            <Grid item xs={12} md={6} direction="column" lg={6}>
+              <Paper className={classes.paper} elevation={3}>
+                <h1 className={classes.stH1}>
+                  <AssignmentTurnedInRoundedIcon
+                    style={{
+                      color: "#9d4eddff",
+                    }}
+                  />
+                  experiences
+                </h1>
+                <h3 className={classes.stP}>
+                  group projects with different teams
+                </h3>
+                <p className={classes.stPara}>inside and outside of school</p>
+                <p className={classes.stPara}>September 2020 - </p>
+              </Paper>
+            </Grid>
+          </Grid>
+        </Grid>
+      </div>
+    </Container>
+  );
+}
+
+export default Index;
+
+/* <StyledAbout>
+      <h1>about me</h1>
+      <StyledPresContent>
+        <StyledLeftContent>
+          <StyledH3>hey, i´m a</StyledH3>
+          <StyledPara>
+            Front-End Developer, I'm passionate about creating and developing
+            web interfaces. Always ready to learn new things and expand my
+            developing tools
+          </StyledPara>
+          <StyledExperience>
+            <ExpH3>{"< 1"}</ExpH3>
+            <ExpPara>Year of experience</ExpPara>
+            <ExpH3>3</ExpH3>
+            <ExpPara>Completed projects</ExpPara>
+          </StyledExperience>
+          <StyledCV>
+            <h3>life story</h3>
+            <ExpH3>3</ExpH3>
+            <ExpPara>Completed projects</ExpPara>
+            <ExpPara>Completed projects</ExpPara>
+            <ExpPara>Completed projects</ExpPara>
+          </StyledCV>
+        </StyledLeftContent>
+        <StyledImg src={myImage} alt="Nikos about" />
+      </StyledPresContent>
+    </StyledAbout> */
 
 /* const StyledAbout = styled.main`
   display: flex;
@@ -109,141 +295,3 @@ const StyledCV = styled.div`
     width: 100%;
   }
 `; */
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.primary,
-  },
-  img: {
-    borderRadius: "2%",
-    boxShadow: "1px 1px 5px 2px var(--light-gray)",
-    width: "100%",
-    marginTop: "30px",
-  },
-  h1: {
-    fontSize: "4rem",
-    marginBottom: "70px",
-    marginTop: "30px",
-    textAlign: "center",
-  },
-
-  styledPara: {
-    /*  margin: "10px",
-    marginLeft: "20px", */
-    textAlign: "left",
-    wordSpacing: "4px",
-    fontSize: "16px",
-    maxWidth: "250px",
-  },
-  expH3: {
-    marginBottom: "10px",
-    marginTop: "30px",
-    wordSpacing: "2px",
-    fontSize: "2rem",
-    textJustify: "center",
-  },
-  expH1: {
-    marginBottom: "10px",
-    marginTop: "30px",
-    wordSpacing: "2px",
-    fontSize: "2.5rem",
-  },
-  expPara: {
-    marginTop: "10px",
-    marginBottom: "10px",
-    wordSpacing: "2px",
-    fontSize: "1rem",
-  },
-  stH1: {
-    borderBottom: "1px, black ",
-    marginBottom: "10px",
-    marginTop: "30px",
-    wordSpacing: "2px",
-    fontSize: "2.5rem",
-    paddingLeft: "10px",
-  },
-  stP: {
-    marginTop: "10px",
-    marginBottom: "10px",
-    wordSpacing: "2px",
-    fontSize: "1rem",
-    paddingLeft: "10px",
-  },
-  stH3: {
-    marginBottom: "10px",
-    marginTop: "30px",
-    wordSpacing: "1px",
-    fontSize: "2rem",
-    paddingLeft: "10px",
-  },
-
-  styledCV: {},
-}));
-
-function Index() {
-  const classes = useStyles();
-  return (
-    <Container maxWidth="xl" direction="row" align="center" justify="center">
-      <div className={classes.root}>
-        <Grid container lg={12}>
-          <Grid item xs={12} lg={6} align="center" justify="space-between">
-            <h1 className={classes.h1}>about me</h1>
-            <p className={classes.styledPara}>
-              Hey, I´m a Front-End Developer and I'm passionate about creating
-              and developing web interfaces. Always ready to learn new things
-              and expand my developing tools
-            </p>
-            <h3 className={classes.expH3}> 1 </h3>
-            <p className={classes.expPara}>Year of experience</p>
-            <h3 className={classes.expH3}> 3 </h3>
-            <p className={classes.expPara}>Completed projects</p>
-          </Grid>
-          <Grid container xs={12} lg={3}>
-            <img src={myImage} className={classes.img} alt="" />
-          </Grid>
-          <Grid item xs={6} direction="column" lg={6}>
-            <h1 className={classes.stH1}>experience</h1>
-            <h3 className={classes.stP}>front end developer</h3>
-            <p className={classes.stPara}>student</p>
-            <p className={classes.stPara}>September 2020 - June 2022</p>
-          </Grid>
-        </Grid>
-      </div>
-    </Container>
-  );
-}
-
-export default Index;
-
-/* <StyledAbout>
-      <h1>about me</h1>
-      <StyledPresContent>
-        <StyledLeftContent>
-          <StyledH3>hey, i´m a</StyledH3>
-          <StyledPara>
-            Front-End Developer, I'm passionate about creating and developing
-            web interfaces. Always ready to learn new things and expand my
-            developing tools
-          </StyledPara>
-          <StyledExperience>
-            <ExpH3>{"< 1"}</ExpH3>
-            <ExpPara>Year of experience</ExpPara>
-            <ExpH3>3</ExpH3>
-            <ExpPara>Completed projects</ExpPara>
-          </StyledExperience>
-          <StyledCV>
-            <h3>life story</h3>
-            <ExpH3>3</ExpH3>
-            <ExpPara>Completed projects</ExpPara>
-            <ExpPara>Completed projects</ExpPara>
-            <ExpPara>Completed projects</ExpPara>
-          </StyledCV>
-        </StyledLeftContent>
-        <StyledImg src={myImage} alt="Nikos about" />
-      </StyledPresContent>
-    </StyledAbout> */
