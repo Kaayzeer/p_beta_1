@@ -8,8 +8,8 @@ import styled from "styled-components";
 
 const StyledMain = styled.main`
   display: flex;
-  /*  justify-content: center; */
-  width: 100%;
+  justify-content: center;
+  /* width: 100%; */
   min-height: 75vh;
   background: var(--baby-powder);
 `;
@@ -23,12 +23,12 @@ function index() {
         </Route>
         <Route path="/about">
           <About />
+          <Route path="/projects">
+            <Projects />
+          </Route>
         </Route>
         <Route path="/contact">
           <Contact />
-        </Route>
-        <Route path="/projects">
-          <Projects />
         </Route>
       </Switch>
     </StyledMain>

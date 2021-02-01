@@ -40,10 +40,10 @@ function index() {
         <Link to="/about">About</Link>
       </StyledLi>
       <StyledLi>
-        <Link to="/contact">Contact</Link>
+        <Link to="/projects">Projects</Link>
       </StyledLi>
       <StyledLi>
-        <Link to="/projects">Projects</Link>
+        <Link to="/contact">Contact</Link>
       </StyledLi>
     </StyledUL>
   );

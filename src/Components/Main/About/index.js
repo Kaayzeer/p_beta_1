@@ -93,11 +93,11 @@ const useStyles = makeStyles((theme) => ({
 function Index() {
   const classes = useStyles();
   return (
-    <Container maxWidth="xl">
+    <Container maxWidth="lg">
       <div className={classes.root}>
         <Grid container lg={12} direction="column" align="center">
           <Grid container lg={12} direction="row" justify="space-evenly">
-            <Grid item xs={12} lg={6}>
+            <Grid item xs={12} md={6} lg={6}>
               <h1 className={classes.h1}>about me</h1>
               <p className={classes.styledPara}>
                 Hey, I´m a Front-End Developer student who started to code after
@@ -113,7 +113,7 @@ function Index() {
               <p className={classes.expPara}>Completed projects</p>
             </Grid>
 
-            <Grid item xs={12} lg={3}>
+            <Grid item xs={12} md={6} lg={6}>
               <img src={myImage} className={classes.img} alt="" />
             </Grid>
           </Grid>
