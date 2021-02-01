@@ -91,11 +91,7 @@ function TextFields() {
   return (
     <Container maxWidth="xl" className={classes.root}>
       <h1 className={classes.h1}>contact me</h1>
-      <Paper className={classes.paper}>
-        <h3 className={classes.h3}> have a project in mind?</h3>
 
-        <p className={classes.styledP}>lets build it together</p>
-      </Paper>
       <Grid container direction="row" justify="space-around">
         <Grid item xs={12} md={3} lg={6}>
           <Card className={classes.card}>

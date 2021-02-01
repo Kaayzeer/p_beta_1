@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import myImage from "../../../Photos/Nikos_edited_00-6.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -7,6 +7,7 @@ import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import BusinessCenterRoundedIcon from "@material-ui/icons/BusinessCenterRounded";
 import AssignmentTurnedInRoundedIcon from "@material-ui/icons/AssignmentTurnedInRounded";
+import GitContext from "../gitContext.js";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -92,74 +93,73 @@ const useStyles = makeStyles((theme) => ({
 
 function Index() {
   const classes = useStyles();
-  const [gitList, setGitList] = useState("");
-
-  useEffect(() => {
-    fetch("https://api.github.com/users/kayzersozee")
-      .then((response) => response.json())
-      .then((data) => setGitList(data));
-  }, []);
 
   return (
-    <Container maxWidth="l">
-      <div className={classes.root}>
-        <Grid container lg={12} direction="column" align="center">
-          <Grid container lg={12} direction="row" justify="space-evenly">
-            <Grid item xs={12} md={6} lg={6}>
-              <h1 className={classes.h1}>about me</h1>
-              <p className={classes.styledPara}>{gitList.bio}</p>
-              <h3 className={classes.expH3}> 1 </h3>
-              <p className={classes.expPara}>Year of experience</p>
-              <h3 className={classes.expH3}> 3 </h3>
-              <p className={classes.expPara}>Completed projects</p>
-            </Grid>
+    <GitContext.Consumer>
+      {(value) => (
+        <Container maxWidth="lg">
+          <div className={classes.root}>
+            <Grid container lg={12} direction="column" align="center">
+              <Grid container lg={12} direction="row" justify="space-evenly">
+                <Grid item xs={12} md={6} lg={6}>
+                  <h1 className={classes.h1}>about me</h1>
+                  <p className={classes.styledPara}>{value.bio}</p>
+                  <h3 className={classes.expH3}> 1 </h3>
+                  <p className={classes.expPara}>Year of experience</p>
+                  <h3 className={classes.expH3}> 3 </h3>
+                  <p className={classes.expPara}>Completed projects</p>
+                </Grid>
 
-            <Grid item xs={12} md={6} lg={3} xl={6}>
-              <img src={myImage} className={classes.img} alt="" />
-            </Grid>
-          </Grid>
-          <Box mt={10}></Box>
-          <Grid container xs={12} lg={12} direction="row" justify="center">
-            <Grid item xs={12} md={6} lg={6} xl={6}>
-              <Paper className={classes.paper} elevation={3}>
-                <h1 className={classes.stH1}>
-                  <BusinessCenterRoundedIcon
-                    style={{
-                      color: "#9d4eddff",
-                    }}
-                  />
-                  studies
-                </h1>
+                <Grid item xs={12} md={6} lg={3} xl={6}>
+                  <img src={myImage} className={classes.img} alt="" />
+                </Grid>
+              </Grid>
+              <Box mt={10}></Box>
+              <Grid container spacing={2} direction="row" justify="center">
+                <Grid item xs={12} md={6} lg={6} xl={6}>
+                  <Paper className={classes.paper} elevation={3}>
+                    <h1 className={classes.stH1}>
+                      <BusinessCenterRoundedIcon
+                        style={{
+                          color: "#9d4eddff",
+                        }}
+                      />
+                      studies
+                    </h1>
 
-                <h3 className={classes.stP}>
-                  front end developer with ui/ux design
-                </h3>
-                <p className={classes.stPara}>student at the moment</p>
-                <p className={classes.stPara}>September 2020 - June 2022</p>
-              </Paper>
-            </Grid>
+                    <h3 className={classes.stP}>
+                      front end developer with ui/ux design
+                    </h3>
+                    <p className={classes.stPara}>student at the moment</p>
+                    <p className={classes.stPara}>September 2020 - June 2022</p>
+                  </Paper>
+                </Grid>
 
-            <Grid item xs={12} md={6} direction="column" lg={6}>
-              <Paper className={classes.paper} elevation={3}>
-                <h1 className={classes.stH1}>
-                  <AssignmentTurnedInRoundedIcon
-                    style={{
-                      color: "#9d4eddff",
-                    }}
-                  />
-                  experiences
-                </h1>
-                <h3 className={classes.stP}>
-                  group projects with different teams
-                </h3>
-                <p className={classes.stPara}>inside and outside of school</p>
-                <p className={classes.stPara}>September 2020 - </p>
-              </Paper>
+                <Grid item xs={12} md={6} direction="column" lg={6}>
+                  <Paper className={classes.paper} elevation={3}>
+                    <h1 className={classes.stH1}>
+                      <AssignmentTurnedInRoundedIcon
+                        style={{
+                          color: "#9d4eddff",
+                        }}
+                      />
+                      experiences
+                    </h1>
+                    <h3 className={classes.stP}>
+                      group projects with different teams
+                    </h3>
+                    <p className={classes.stPara}>
+                      inside and outside of school
+                    </p>
+                    <p className={classes.stPara}>September 2020 - </p>
+                  </Paper>
+                </Grid>
+              </Grid>
             </Grid>
-          </Grid>
-        </Grid>
-      </div>
-    </Container>
+          </div>
+        </Container>
+      )}
+    </GitContext.Consumer>
   );
 }
 
