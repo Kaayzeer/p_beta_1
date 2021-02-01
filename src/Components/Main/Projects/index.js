@@ -1,11 +1,7 @@
 import React from "react";
 
-function index() {
-  return (
-    <>
-      <h1>projects</h1>
-    </>
-  );
+function Index() {
+  return <h1>PRojects</h1>;
 }
 
-export default index;
+export default Index;

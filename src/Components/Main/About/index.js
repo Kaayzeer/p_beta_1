@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import myImage from "../../../Photos/Nikos_edited_00-6.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -92,34 +92,35 @@ const useStyles = makeStyles((theme) => ({
 
 function Index() {
   const classes = useStyles();
+  const [gitList, setGitList] = useState("");
+
+  useEffect(() => {
+    fetch("https://api.github.com/users/kayzersozee")
+      .then((response) => response.json())
+      .then((data) => setGitList(data));
+  }, []);
+
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="l">
       <div className={classes.root}>
         <Grid container lg={12} direction="column" align="center">
           <Grid container lg={12} direction="row" justify="space-evenly">
             <Grid item xs={12} md={6} lg={6}>
               <h1 className={classes.h1}>about me</h1>
-              <p className={classes.styledPara}>
-                Hey, I´m a Front-End Developer student who started to code after
-                I took a year off in my studies to be a physical education
-                teacher. That was the best decision ever! Since i first started
-                to code i can't leave the computer alone. I'm passionate about
-                creating and developing web interfaces. Always ready to learn
-                new things and expand my developing tools.
-              </p>
+              <p className={classes.styledPara}>{gitList.bio}</p>
               <h3 className={classes.expH3}> 1 </h3>
               <p className={classes.expPara}>Year of experience</p>
               <h3 className={classes.expH3}> 3 </h3>
               <p className={classes.expPara}>Completed projects</p>
             </Grid>
 
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6} lg={3} xl={6}>
               <img src={myImage} className={classes.img} alt="" />
             </Grid>
           </Grid>
           <Box mt={10}></Box>
           <Grid container xs={12} lg={12} direction="row" justify="center">
-            <Grid item xs={12} md={6} direction="column" lg={6}>
+            <Grid item xs={12} md={6} lg={6} xl={6}>
               <Paper className={classes.paper} elevation={3}>
                 <h1 className={classes.stH1}>
                   <BusinessCenterRoundedIcon
