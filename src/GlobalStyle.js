@@ -19,7 +19,12 @@ const GlobalStyle = createGlobalStyle`
 --powder-blue: #caf0f8ff;
 --baby-powder: #fffffcff;
 
-/* purple*/
+/* orange to purple*/
+--pumpkin: #ff6d00ff;
+--heat-wave: #ff7900ff;
+--dark-orange: #ff8500ff;
+--yellow-orange-color-wheel: #ff9100ff;
+--orange-peel: #ff9e00ff;
 --russian-violet: #10002bff;
 --russian-violet-2: #240046ff;
 --persian-indigo: #3c096cff;

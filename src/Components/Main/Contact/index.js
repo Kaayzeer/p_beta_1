@@ -4,8 +4,7 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
-import Paper from "@material-ui/core/Paper";
-import Box from "@material-ui/core/Box";
+
 import Container from "@material-ui/core/Container";
 import CallEndRoundedIcon from "@material-ui/icons/CallEndRounded";
 import AlternateEmailRoundedIcon from "@material-ui/icons/AlternateEmailRounded";
@@ -89,7 +88,7 @@ function TextFields() {
   };
 
   return (
-    <Container maxWidth="xl" className={classes.root}>
+    <Container maxwidth="xl" className={classes.root}>
       <h1 className={classes.h1}>contact me</h1>
 
       <Grid container direction="row" justify="space-around">

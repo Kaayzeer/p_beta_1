@@ -10,6 +10,7 @@ import Typography from "@material-ui/core/Typography";
 import stairs from "../../../Photos/stairs.jpg";
 import Grid from "@material-ui/core/Grid";
 import UseStyles from "./projectStyles";
+import Container from "@material-ui/core/Container";
 
 export default function Mediacard() {
   const classes = UseStyles();
@@ -22,48 +23,46 @@ export default function Mediacard() {
   }, []);
 
   return (
-    <>
+    <Grid container direction="row" justify="center" spacing={3}>
       {gitRepo.map((repo) => (
-        <Grid container lg={12} direction="row" justify="center">
-          <Grid item xs={6} lg={6}>
-            <Box mt={5}></Box>
+        <Grid key={repo.id} item xs={6} md={6} lg={6} xl={6}>
+          <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image={stairs}
+                title="portfolio"
+              />
 
-            <Card className={classes.root}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.media}
-                  image={stairs}
-                  title="portfolio"
-                />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {repo.name}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  color="textSecondary"
+                  component="h3"
+                >
+                  {repo.description}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  last updated: {repo.updated_at}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
 
-                <CardContent key={repo.id}>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    {repo.name}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    made with Javascript, CSS and React using ui/materials,
-                    styled-components, react-router.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary" href={repo.html_url}>
+                Github
+              </Button>
 
-              <CardActions>
-                <Button size="small" color="primary" href={repo.html_url}>
-                  Github
-                </Button>
-
-                <Button size="small" color="primary">
-                  Demo
-                </Button>
-              </CardActions>
-            </Card>
-          </Grid>
+              <Button size="small" color="primary">
+                Demo
+              </Button>
+            </CardActions>
+          </Card>
         </Grid>
       ))}
-    </>
+    </Grid>
   );
 }

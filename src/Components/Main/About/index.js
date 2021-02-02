@@ -15,7 +15,7 @@ function Index() {
   return (
     <GitContext.Consumer>
       {(value) => (
-        <Container maxWidth="lg">
+        <Container>
           <div className={classes.root}>
             <Grid container direction="column" align="center">
               <Grid container direction="row" justify="space-evenly">
