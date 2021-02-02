@@ -1,6 +1,5 @@
 import React from "react";
 import myImage from "../../../Photos/Nikos_edited_00-6.jpg";
-import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Container from "@material-ui/core/Container";
@@ -8,88 +7,7 @@ import Box from "@material-ui/core/Box";
 import BusinessCenterRoundedIcon from "@material-ui/icons/BusinessCenterRounded";
 import AssignmentTurnedInRoundedIcon from "@material-ui/icons/AssignmentTurnedInRounded";
 import GitContext from "../gitContext.js";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    color: theme.palette.text.primary,
-  },
-  AssignmentTurnedInRoundedIcon: {
-    margin: "5px",
-  },
-
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.primary,
-  },
-  img: {
-    borderRadius: "2%",
-    boxShadow: "1px 1px 5px 2px var(--light-gray)",
-    width: "100%",
-    marginTop: "30px",
-  },
-  h1: {
-    fontSize: "4rem",
-    marginBottom: "70px",
-    marginTop: "30px",
-    textAlign: "center",
-  },
-
-  styledPara: {
-    /*  margin: "10px",
-    marginLeft: "20px", */
-    textAlign: "center",
-    wordBreak: "break-word",
-    wordSpacing: "4px",
-    fontSize: "1.5rem",
-    maxWidth: "460px",
-  },
-  expH3: {
-    marginBottom: "10px",
-    marginTop: "30px",
-    wordSpacing: "2px",
-    fontSize: "2rem",
-    textJustify: "center",
-  },
-  expH1: {
-    marginBottom: "10px",
-    marginTop: "30px",
-    wordSpacing: "2px",
-    fontSize: "2.5rem",
-  },
-  expPara: {
-    marginTop: "10px",
-    marginBottom: "10px",
-    wordSpacing: "2px",
-    fontSize: "1.5rem",
-  },
-  stH1: {
-    borderBottom: "1px, black ",
-    marginBottom: "10px",
-    marginTop: "30px",
-    wordSpacing: "2px",
-    fontSize: "2.5rem",
-    paddingLeft: "10px",
-    textAlign: "center",
-  },
-  stP: {
-    marginTop: "10px",
-    marginBottom: "10px",
-    wordSpacing: "2px",
-    fontSize: "1.3rem",
-    paddingLeft: "10px",
-    textAlign: "center",
-  },
-  stPara: {
-    marginTop: "10px",
-    marginBottom: "10px",
-    wordSpacing: "2px",
-    fontSize: "1.3rem",
-    paddingLeft: "10px",
-    textAlign: "center",
-  },
-}));
+import useStyles from "./aboutStyles";
 
 function Index() {
   const classes = useStyles();
@@ -99,8 +17,8 @@ function Index() {
       {(value) => (
         <Container maxWidth="lg">
           <div className={classes.root}>
-            <Grid container lg={12} direction="column" align="center">
-              <Grid container lg={12} direction="row" justify="space-evenly">
+            <Grid container direction="column" align="center">
+              <Grid container direction="row" justify="space-evenly">
                 <Grid item xs={12} md={6} lg={6}>
                   <h1 className={classes.h1}>about me</h1>
                   <p className={classes.styledPara}>{value.bio}</p>
@@ -110,7 +28,7 @@ function Index() {
                   <p className={classes.expPara}>Completed projects</p>
                 </Grid>
 
-                <Grid item xs={12} md={6} lg={3} xl={6}>
+                <Grid item xs={12} md={6} lg={6} xl={6}>
                   <img src={myImage} className={classes.img} alt="" />
                 </Grid>
               </Grid>
