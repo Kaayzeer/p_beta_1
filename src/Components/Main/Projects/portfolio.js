@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
@@ -12,37 +13,57 @@ import UseStyles from "./projectStyles";
 
 export default function Mediacard() {
   const classes = UseStyles();
+  const [gitRepo, setGitRepo] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api.github.com/users/kayzersozee/repos")
+      .then((response) => response.json())
+      .then((data) => setGitRepo(data));
+  }, []);
+
   return (
-    <Grid container lg={12} direction="row" justify="center">
-      <Grid item xs={6} lg={6}>
-        <Box mt={5}></Box>
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={stairs}
-              title="portfolio"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                portfolio v.1
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                made with Javascript, CSS and React using ui/materials,
-                styled-components, react-router.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              Guthub
-            </Button>
-            <Button size="small" color="primary">
-              Demo
-            </Button>
-          </CardActions>
-        </Card>
-      </Grid>
-    </Grid>
+    <>
+      {gitRepo.map((repo) => (
+        <Grid container lg={12} direction="row" justify="center">
+          <Grid item xs={6} lg={6}>
+            <Box mt={5}></Box>
+
+            <Card className={classes.root}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image={stairs}
+                  title="portfolio"
+                />
+
+                <CardContent key={repo.id}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    {repo.name}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    made with Javascript, CSS and React using ui/materials,
+                    styled-components, react-router.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+
+              <CardActions>
+                <Button size="small" color="primary" href={repo.html_url}>
+                  Github
+                </Button>
+
+                <Button size="small" color="primary">
+                  Demo
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+        </Grid>
+      ))}
+    </>
   );
 }

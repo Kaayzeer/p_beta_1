@@ -16,7 +16,7 @@ const StyledMain = styled.main`
 `;
 
 function Index() {
-  const [gitList, setGitList] = useState("");
+  const [gitList, setGitList] = useState([]);
 
   useEffect(() => {
     fetch("https://api.github.com/users/kayzersozee")

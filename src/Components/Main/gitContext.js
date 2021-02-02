@@ -1,5 +1,5 @@
 import { createContext } from "react";
 
-const GitContext = createContext(null);
+const GitContext = createContext();
 
 export default GitContext;
