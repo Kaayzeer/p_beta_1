@@ -11,22 +11,22 @@ export default function AboutMe() {
       {(value) => (
         <Grid container direction="row" justify="space-evenly" spacing={8}>
           <Grid item xs={12} md={6} lg={6}>
-            <Typography variant="h1" color="primary" component="h1">
+            <Typography variant="h1" color="primary">
               about me
             </Typography>
-            <Typography variant="h6" color="primary" component="h6">
+            <Typography variant="h6" color="primary">
               {value.bio}
             </Typography>
-            <Typography variant="h4" color="primary" component="h4">
+            <Typography variant="h4" color="primary">
               1
             </Typography>
-            <Typography variant="body2" color="primary" component="p">
+            <Typography variant="body2" color="primary">
               Year of experience
             </Typography>
-            <Typography variant="h4" color="primary" component="h4">
+            <Typography variant="h4" color="primary">
               3
             </Typography>
-            <Typography variant="body2" color="primary" component="p">
+            <Typography variant="body2" color="primary">
               Completed projects
             </Typography>
           </Grid>

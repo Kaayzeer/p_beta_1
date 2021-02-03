@@ -6,8 +6,7 @@ import About from "./About";
 import { Switch, Route } from "react-router-dom";
 import styled from "styled-components";
 import GitContext from "./gitContext";
-import { ThemeProvider } from "@material-ui/core/styles";
-import { createMuiTheme } from "@material-ui/core/styles";
+import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
   palette: {
@@ -29,7 +28,7 @@ const theme = createMuiTheme({
     h6: {
       fontSize: "1.5rem",
       letterSpacing: "0.01em",
-      marginTop: "15%",
+      marginTop: "10%",
     },
     body2: {
       fontSize: "1.5rem",
@@ -65,26 +64,29 @@ function Index() {
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
-      <GitContext.Provider value={gitList}>
+    <GitContext.Provider value={gitList}>
+      <ThemeProvider theme={theme}>
         <StyledMain>
           <Switch>
             <Route exact path="/">
               <Home />
             </Route>
+
             <Route path="/about">
               <About />
             </Route>
+
             <Route path="/projects">
               <Projects />
             </Route>
+
             <Route path="/contact">
               <Contact />
             </Route>
           </Switch>
         </StyledMain>
-      </GitContext.Provider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </GitContext.Provider>
   );
 }
 

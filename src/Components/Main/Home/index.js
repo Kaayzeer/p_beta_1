@@ -66,7 +66,7 @@ function index() {
       <SmallLine></SmallLine>
       <Button
         style={{ backgroundColor: "transparent", color: "white" }}
-        Size="small"
+        size="small"
         onClick={() => alert("Skickas till mitt CV sen")}
         variant="contained"
       >

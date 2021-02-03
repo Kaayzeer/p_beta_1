@@ -27,7 +27,7 @@ export default function AboutPapers() {
         </Paper>
       </Grid>
       {/* first and second paper breakpoint*/}
-      <Grid item xs={12} md={6} direction="column" lg={6}>
+      <Grid item xs={12} md={6} lg={6}>
         <Paper className={classes.paper} elevation={3}>
           <Typography variant="h3" color="primary" component="h3">
             <Icon2 style={{ color: "#9d4eddff" }} />

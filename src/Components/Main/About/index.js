@@ -6,6 +6,7 @@ import AboutMe from "./aboutMe";
 
 function Index() {
   const classes = useStyles();
+
   return (
     <Container maxwidth="lg" className={classes.root}>
       <Grid container direction="column" align="center">
