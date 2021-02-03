@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
     margin : 0;
     padding: 0;
     box-sizing: border-box;
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,200&display=swap');
+    /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,200&display=swap'); */
 
     /* light blue */
 --navy-blue: #03045eff;

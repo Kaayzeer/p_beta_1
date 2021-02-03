@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "@material-ui/core/Button";
-import Link from "react-router-dom";
 import SpaRoundedIcon from "@material-ui/icons/SpaRounded";
 
 const StyledHome = styled.main`
