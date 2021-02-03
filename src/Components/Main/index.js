@@ -20,7 +20,29 @@ const theme = createMuiTheme({
       dark: "#0b090aff",
     },
   },
+  typography: {
+    h1: {
+      fontSize: "4.5rem",
+      letterSpacing: "1.5px",
+      marginTop: "3%",
+    },
+    h6: {
+      fontSize: "1.5rem",
+      letterSpacing: "0.01em",
+      marginTop: "15%",
+    },
+    body2: {
+      fontSize: "1.5rem",
+      letterSpacing: "0.01em",
+      marginTop: "15px",
+    },
+    h4: {
+      marginTop: "10%",
+    },
+  },
 });
+
+// h1 - h4 is styling for about me components
 
 // om jag vill göra themet till dark använd propen type: 'dark'
 // skapa en if sats till en handlechange knapp och ändra type när onClick

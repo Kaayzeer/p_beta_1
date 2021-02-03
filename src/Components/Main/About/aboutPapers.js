@@ -15,7 +15,7 @@ export default function AboutPapers() {
             <Icon1 style={{ color: "#9d4eddff" }} />
             studies
           </Typography>
-          <Typography variant="h4" color="primary" component="h4">
+          <Typography variant="h5" color="primary" component="h5">
             front end developer with ui/ux
           </Typography>
           <Typography variant="body1" color="primary" component="p">
@@ -33,7 +33,7 @@ export default function AboutPapers() {
             <Icon2 style={{ color: "#9d4eddff" }} />
             experiences
           </Typography>
-          <Typography variant="h4" color="primary" component="h4">
+          <Typography variant="h5" color="primary" component="h5">
             group projects with different teams
           </Typography>
           <Typography variant="body1" color="primary" component="p">

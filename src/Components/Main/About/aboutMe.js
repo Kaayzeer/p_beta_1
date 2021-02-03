@@ -9,29 +9,24 @@ export default function AboutMe() {
   return (
     <GitContext.Consumer>
       {(value) => (
-        <Grid container direction="row" justify="space-evenly">
+        <Grid container direction="row" justify="space-evenly" spacing={8}>
           <Grid item xs={12} md={6} lg={6}>
             <Typography variant="h1" color="primary" component="h1">
               about me
             </Typography>
-            <Typography
-              variant="body1"
-              color="primary"
-              className={classes.h3}
-              component="p"
-            >
+            <Typography variant="h6" color="primary" component="h6">
               {value.bio}
             </Typography>
-            <Typography variant="h3" color="primary" component="h3">
+            <Typography variant="h4" color="primary" component="h4">
               1
             </Typography>
-            <Typography variant="body1" color="primary" component="p">
+            <Typography variant="body2" color="primary" component="p">
               Year of experience
             </Typography>
-            <Typography variant="h3" color="primary" component="h3">
+            <Typography variant="h4" color="primary" component="h4">
               3
             </Typography>
-            <Typography variant="body1" color="primary" component="p">
+            <Typography variant="body2" color="primary" component="p">
               Completed projects
             </Typography>
           </Grid>
