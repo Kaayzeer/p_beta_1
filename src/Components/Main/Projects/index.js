@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
 import UseStyles from "./projectStyles";
-import PortfolioCard from "./portfolio";
+import PortfolioCard from "./card";
 import PortfolioPaper from "./paper";
 
 function Index() {

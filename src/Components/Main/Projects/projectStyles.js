@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core/styles";
-import stairs from "../../../Photos/stairs.jpg";
 
 const UseStyles = makeStyles((theme) => ({
   root: {

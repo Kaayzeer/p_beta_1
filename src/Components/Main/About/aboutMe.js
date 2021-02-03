@@ -5,6 +5,7 @@ import myImage from "../../../Photos/Nikos_edited_00-6.jpg";
 
 export default function AboutMe() {
   const classes = useStyles();
+
   return (
     <GitContext.Consumer>
       {(value) => (
@@ -13,7 +14,12 @@ export default function AboutMe() {
             <Typography variant="h1" color="primary" component="h1">
               about me
             </Typography>
-            <Typography variant="body1" color="primary" component="p">
+            <Typography
+              variant="body1"
+              color="primary"
+              className={classes.h3}
+              component="p"
+            >
               {value.bio}
             </Typography>
             <Typography variant="h3" color="primary" component="h3">

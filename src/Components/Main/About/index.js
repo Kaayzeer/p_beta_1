@@ -1,8 +1,8 @@
 import React from "react";
 import { Grid, Container, Box } from "@material-ui/core/";
 import useStyles from "./aboutStyles";
-import AboutPapers from "./papers";
-import AboutMe from "./intro";
+import AboutPapers from "./aboutPapers";
+import AboutMe from "./aboutMe";
 
 function Index() {
   const classes = useStyles();
