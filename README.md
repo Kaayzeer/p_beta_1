@@ -6,7 +6,7 @@
     <br />
     <a href="https://github.com/kayzersozee">Nikolas Git</a><strong>Explore the docs »</strong></a>
     <br />
-    <img src="/Images/nikolas.jpg" width="300" height="300" style="vertical-align:middle;margin:50px 0px">
+    <img src="./nikohead.jpg" width="300" height="300" style="vertical-align:middle;margin:50px 0px">
     <br />
 </p>
 
