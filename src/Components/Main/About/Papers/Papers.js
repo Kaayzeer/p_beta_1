@@ -1,9 +1,9 @@
 import { Grid, Paper, Typography } from "@material-ui/core";
 import AssignmentTurnedInRoundedIcon from "@material-ui/icons/AssignmentTurnedInRounded";
 import BusinessCenterRoundedIcon from "@material-ui/icons/BusinessCenterRounded";
-import useStyles from "./aboutStyles";
+import useStyles from "../UseStyles";
 
-export default function AboutPapers() {
+export default function Papers() {
   const classes = useStyles();
   const Icon1 = BusinessCenterRoundedIcon;
   const Icon2 = AssignmentTurnedInRoundedIcon;

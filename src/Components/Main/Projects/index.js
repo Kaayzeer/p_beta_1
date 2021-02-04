@@ -2,9 +2,9 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
-import UseStyles from "./projectStyles";
-import PortfolioCard from "./card";
-import PortfolioPaper from "./paper";
+import UseStyles from "./UseStyles";
+import PortfolioCard from "./Card/card";
+import PortfolioPaper from "./Paper/paper";
 
 function Index() {
   const classes = UseStyles();

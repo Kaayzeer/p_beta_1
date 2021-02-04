@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const UseStyles = makeStyles((theme) => ({
   root: {
-    /* flexGrow: 1, */
+    flexGrow: 1,
     color: theme.palette.text.primary,
   },
   mediaRoot: {
@@ -13,38 +13,35 @@ const UseStyles = makeStyles((theme) => ({
   },
   paper: {
     padding: theme.spacing(2),
+    marginTop: "30px",
     textAlign: "center",
-    background: "linear-gradient(135deg, #ff6d00ff 0%, #ff9e00ff 100%)",
+    background: "transparent",
   },
   stairs: {
     height: "100%",
   },
-  Button: {
-    background: "linear-gradient(45deg, #10002bff 30%, #e0aaffff 90%)",
-    color: "white",
-  },
+
   h1: {
     fontSize: "4rem",
-    marginBottom: "70px",
+    marginBottom: "30px",
     marginTop: "30px",
     textAlign: "center",
-    color: "var(--baby-powder)",
+    /* color: "var(--baby-powder)", */
   },
-  expH3: {
+  h3: {
     marginBottom: "10px",
-    marginTop: "30px",
+    marginTop: "10px",
     wordSpacing: "2px",
-    fontSize: "2rem",
+    fontSize: "2.5rem",
     textJustify: "center",
-    color: "var(--baby-powder)",
   },
   hr: {
     background: "#fff",
     height: "2px",
-    width: "300px",
+    width: "280px",
     margin: "auto",
-    margiTop: "30px",
-    marginBottom: "10px",
+    marginTop: "10px",
+    marginBottom: "20px",
   },
 }));
 

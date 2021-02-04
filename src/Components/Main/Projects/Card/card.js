@@ -6,9 +6,9 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import stairs from "../../../Photos/stairs.jpg";
+import stairs from "../../../../Photos/stairs.jpg";
 import Grid from "@material-ui/core/Grid";
-import UseStyles from "./projectStyles";
+import UseStyles from "../UseStyles";
 
 export default function PortfolioCard() {
   const classes = UseStyles();
@@ -23,7 +23,7 @@ export default function PortfolioCard() {
   return (
     <Grid container direction="row" justify="center" spacing={3}>
       {gitRepo.map((repo) => (
-        <Grid key={repo.id} item xs={6} md={4} lg={4} xl={4}>
+        <Grid key={repo.id} item xs={12} sm={6} md={4} lg={4} xl={4}>
           <Card className={classes.root}>
             <CardActionArea>
               <CardMedia
