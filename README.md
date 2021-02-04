@@ -4,7 +4,7 @@
   <p align="center">
     Welcome!
     <br />
-    <a href="https://github.com/kayzersozee">Go back to main my main GitPage</a>
+    <a href="https://github.com/kayzersozee">Go back to main GitPage</a>
     <br />
 </p>
 
