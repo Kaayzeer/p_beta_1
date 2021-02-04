@@ -19,7 +19,7 @@ const theme = createMuiTheme({
   }, // h1 - h4 is styling for about me components
   typography: {
     h1: {
-      fontSize: "4.5rem",
+      fontSize: "2.5rem",
       letterSpacing: "1.5px",
       marginTop: "3%",
     },

@@ -37,27 +37,29 @@ export default function PortfolioCard() {
                   {repo.name}
                 </Typography>
                 <Typography
-                  variant="body2"
+                  variant="body1"
                   color="textSecondary"
                   component="h3"
                 >
                   {repo.description}
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography variant="body1" color="textSecondary" component="p">
                   last updated: {repo.updated_at}
                 </Typography>
               </CardContent>
             </CardActionArea>
 
-            <CardActions>
-              <Button size="small" color="primary" href={repo.html_url}>
-                Github
-              </Button>
+            {/*  <CardActions>
+              <Grid container justify="flex-end">
+                <Button size="small" color="primary" href={repo.html_url}>
+                  Github
+                </Button>
 
-              <Button size="small" color="primary">
-                Demo
-              </Button>
-            </CardActions>
+                <Button size="small" color="primary">
+                  Demo
+                </Button>
+              </Grid>
+            </CardActions> */}
           </Card>
         </Grid>
       ))}
