@@ -2,11 +2,9 @@
   <h3 align="center">My first webbased portfolio made as a individual project @ KYH Stockholm</h3>
 
   <p align="center">
-    Welcome! I am Nikolas.
+    Welcome!
     <br />
-    <a href="https://github.com/kayzersozee">Nikolas Git</a><strong>Explore the docs »</strong></a>
-    <br />
-    <img src="./nikohead.jpg" width="300" height="300" style="vertical-align:middle;margin:50px 0px">
+    <a href="https://github.com/kayzersozee">Go back to main my main GitPage</a>
     <br />
 </p>
 
