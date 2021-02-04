@@ -38,7 +38,7 @@ This is the 1st version, since the styles changes with times, this is an ever de
 
 ### Built With
 
-- [HTML](https://developer.mozilla.org/sv-SE/docs/Web/HTML)
+- [HTML5](https://developer.mozilla.org/sv-SE/docs/Web/HTML)
 - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [JS6](https://www.javascript.com/)
 - [React](https://reactjs.org/)

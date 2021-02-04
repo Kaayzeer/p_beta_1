@@ -1,1 +1,4 @@
 rosinelliportfolio.surge.sh
+
+"deploy": "yarn build && cd build && cp index.html 200.html && surge ./"
+(obs, bygger på att det finns en CNAME i public/, annars prompt)
