@@ -49,7 +49,7 @@ export default function PortfolioCard() {
               </CardContent>
             </CardActionArea>
 
-            {/*  <CardActions>
+            <CardActions>
               <Grid container justify="flex-end">
                 <Button size="small" color="primary" href={repo.html_url}>
                   Github
@@ -59,7 +59,7 @@ export default function PortfolioCard() {
                   Demo
                 </Button>
               </Grid>
-            </CardActions> */}
+            </CardActions>
           </Card>
         </Grid>
       ))}

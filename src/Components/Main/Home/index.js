@@ -10,7 +10,7 @@ const StyledHome = styled.main`
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 75vh;
+  height: 100vh;
   background: linear-gradient(135deg, #90e0efff 0%, #e0aaffff 100%);
   color: var(--baby-powder);
 

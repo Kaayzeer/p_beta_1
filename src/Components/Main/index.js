@@ -21,7 +21,9 @@ const theme = createMuiTheme({
     h1: {
       fontSize: "2.5rem",
       letterSpacing: "1.5px",
-      marginTop: "3%",
+      marginTop: "3vh",
+      marginBottom: '1vh',
+
     },
     h6: {
       fontSize: "1.5rem",
@@ -36,7 +38,12 @@ const theme = createMuiTheme({
     h4: {
       marginTop: "10%",
     },
-  }, // h1 - h4 is styling for about me components
+    // h1 - h4 is styling for about me components
+    h3: {
+      
+    }
+  },
+
 });
 
 // om jag vill göra themet till dark använd propen type: 'dark'
@@ -46,8 +53,9 @@ const StyledMain = styled.main`
   display: flex;
   justify-content: center;
   width: 100%;
-  min-height: 75vh;
+  min-height: 80vh;
   background: var(--baby-powder);
+  
 `;
 
 function Index() {

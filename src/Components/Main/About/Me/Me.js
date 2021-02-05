@@ -17,22 +17,22 @@ export default function Me() {
   return (
     <Grid container direction="row" justify="space-evenly" spacing={3}>
       <Grid item xs={12} md={6} lg={6}>
-        <Typography variant="h1" color="primary">
+        <Typography variant="h1" color="primary" component="h1">
           about me
         </Typography>
-        <Typography variant="h6" color="primary">
-          {gitList.bio}
+        <Typography variant="h6" color="primary" component="p">
+          {gitList.bio} Right now i live in {gitList.location}
         </Typography>
-        <Typography variant="h4" color="primary">
+        <Typography variant="h4" color="primary" component="h3">
           1
         </Typography>
-        <Typography variant="body2" color="primary">
+        <Typography variant="body2" color="primary" component="p">
           Year of experience
         </Typography>
-        <Typography variant="h4" color="primary">
+        <Typography variant="h4" color="primary" component="h3">
           3
         </Typography>
-        <Typography variant="body2" color="primary">
+        <Typography variant="body2" color="primary" component="p">
           Completed projects
         </Typography>
       </Grid>

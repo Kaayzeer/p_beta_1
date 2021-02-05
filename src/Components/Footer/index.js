@@ -3,49 +3,77 @@ import styled from "styled-components";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import Grid from "@material-ui/core/Grid";
-import Container from "@material-ui/core/Container";
+import {Typography} from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
+import UseStyles from "./Usestyles";
+
 const StyledFooter = styled.footer`
-  display: flex;
-  justify-content: center;
-  margin-top: 40px; //Temporary
-  background-color: var(--baby-powder);
-  color: var(--dark-orchid);
-  border-top: 2px solid var(--dark-orchid);
+/* display: flex;  
+  width: 100%;  
+ justify-content: center;
+  margin-top: 10px;  */
+  /* background-color: var(--baby-powder); */
+  /* background: linear-gradient(135deg, #90e0efff 0%, #e0aaffff 100%); */
+  /* color: var(--dark-orchid); */
 `;
 
 function Footer() {
+  const classes = UseStyles();
   return (
     <StyledFooter>
-      <Container maxwidth="lg">
-        <Grid container direction="column" align="center">
-          <Grid item xs={12}>
-            <h3>Contact me</h3>
-          </Grid>
-          <Grid item xs={12}>
-            <IconButton
-              aria-label="LinkedIn"
-              onClick={() => window.open("https://www.linkedin.com")}
-            >
-              <LinkedInIcon style={{ color: "#9d4eddff" }} />
-            </IconButton>
-            <IconButton
-              aria-label="Github"
-              onClick={() => window.open("https://github.com/kayzersozee")}
-            >
-              <GitHubIcon style={{ color: "#9d4eddff" }} />
-            </IconButton>
-            <IconButton
-              aria-label="Facebook"
-              onClick={() => window.open("https://www.facebook.com")}
-            >
-              <FacebookIcon style={{ color: "#9d4eddff" }} />
-            </IconButton>
+      <Grid
+        maxwidth="lg"
+        className={classes.root}
+        container
+        direction="column"
+        alignItems="center"
+        justify="center"
+        spacing={3}
+      >
+        <Grid item xs={12} sm={12} md={10} lg={10} xl={10}>
+          <Typography
+            variant="h1"
+            color="primary"
+            component="p"
+            style={{ color: "#0096c7ff" }}
+          >
+            Have a project in mind?
+          </Typography>
+          <Typography
+            variant="body2"
+            color="primary"
+            component="h1"
+            style={{ color: "#0096c7ff" }}
+          >
+            Lets build it together! Contact on socials
+          </Typography>
+
+          <Grid container direction="row" justify="center" align="center">
+            <Grid item xs={12} md={12} lg={12} xl={12}>
+              <IconButton
+                aria-label="LinkedIn"
+                onClick={() => window.open("https://www.linkedin.com")}
+              >
+                <LinkedInIcon style={{ color: "#9d4eddff" }} />
+              </IconButton>
+              <IconButton
+                aria-label="Github"
+                onClick={() => window.open("https://github.com/kayzersozee")}
+              >
+                <GitHubIcon style={{ color: "#9d4eddff" }} />
+              </IconButton>
+              <IconButton
+                aria-label="Facebook"
+                onClick={() => window.open("https://www.facebook.com")}
+              >
+                <FacebookIcon style={{ color: "#9d4eddff" }} />
+              </IconButton>
+            </Grid>
           </Grid>
         </Grid>
-      </Container>
+      </Grid>
     </StyledFooter>
   );
 }
