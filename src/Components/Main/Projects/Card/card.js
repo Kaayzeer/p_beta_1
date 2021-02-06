@@ -22,7 +22,7 @@ export default function PortfolioCard() {
 
   return (
     <Grid container direction="row" justify="center" spacing={3}>
-      {gitRepo.map((repo) => (
+      {gitRepo.filter(repos => repos.description !== null).map((repo) => (
         <Grid key={repo.id} item xs={12} sm={6} md={4} lg={4} xl={4}>
           <Card className={classes.root}>
             <CardActionArea>

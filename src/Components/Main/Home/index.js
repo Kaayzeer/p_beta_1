@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import {makeStyles, Typography} from "@material-ui/core/";
 import Button from "@material-ui/core/Button";
 import SpaRoundedIcon from "@material-ui/icons/SpaRounded";
 
+
+
 const StyledHome = styled.main`
-  padding: 10px;
+  /*  padding: 10px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,16 +15,16 @@ const StyledHome = styled.main`
   width: 100%;
   height: 100vh;
   background: linear-gradient(135deg, #90e0efff 0%, #e0aaffff 100%);
-  color: var(--baby-powder);
 
   h1 {
     font-size: 80px;
     font-weight: 400;
     letter-spacing: 1px;
     margin-bottom: 28px;
+   
 
     @media only screen and (max-width: 600px) {
-      font-size: 47px;
+      font-size: 40px;
       font-weight: 400;
       letter-spacing: 1px;
       margin-bottom: 28px;
@@ -56,13 +59,30 @@ const SmallLine = styled.div`
   }
 `;
 
-function index() {
+/* const useStyles = makeStyles((theme) => ({
+  typography: {
+    h1: {
+      fontSize: "80px",
+      fontWeight: "400",
+      letterSpacing: "1px",
+      marginBottom: "28px",
+    },
+  },
+})); */
+
+function Index() {
+  /* const classes = useStyles() */
   return (
     <StyledHome>
       <SmallLine></SmallLine>
-      <h1>Nikolas Rosinelli</h1>
-      <SpaRoundedIcon />
-      <p>Web Developer</p>
+      <Typography 
+      variant='h1' 
+      color='secondary' 
+      component='h1'
+      
+      >Nikolas Rosinelli</Typography>
+      <SpaRoundedIcon color='secondary'/>
+      <Typography variant='body1' color='secondary' component='p'>Web Developer</Typography>
       <SmallLine></SmallLine>
       <Button
         style={{ backgroundColor: "transparent", color: "white" }}
@@ -76,4 +96,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;

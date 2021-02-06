@@ -15,7 +15,7 @@ const StyledMain = styled.main`
   width: 100%;
   min-height: 80vh;
   background: var(--baby-powder);
-  
+  overflow: hidden;
 `;
 
 function Index() {

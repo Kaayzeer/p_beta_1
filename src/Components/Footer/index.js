@@ -12,11 +12,12 @@ import UseStyles from "./Usestyles";
 const StyledFooter = styled.footer`
 /* display: flex;  
   width: 100%;  
- justify-content: center;
-  margin-top: 10px;  */
+ justify-content: center; */
+  margin-top: 10px; 
   /* background-color: var(--baby-powder); */
   /* background: linear-gradient(135deg, #90e0efff 0%, #e0aaffff 100%); */
   /* color: var(--dark-orchid); */
+  overflow:hidden;
 `;
 
 function Footer() {
@@ -24,9 +25,9 @@ function Footer() {
   return (
     <StyledFooter>
       <Grid
+        container
         maxwidth="lg"
         className={classes.root}
-        container
         direction="column"
         alignItems="center"
         justify="center"
@@ -36,41 +37,42 @@ function Footer() {
           <Typography
             variant="h1"
             color="primary"
-            component="p"
+            component="h1"
             style={{ color: "#0096c7ff" }}
           >
             Have a project in mind?
           </Typography>
+        </Grid>
+        
           <Typography
             variant="body2"
             color="primary"
-            component="h1"
+            component="body2"
             style={{ color: "#0096c7ff" }}
           >
             Lets build it together! Contact on socials
           </Typography>
-
-          <Grid container direction="row" justify="center" align="center">
-            <Grid item xs={12} md={12} lg={12} xl={12}>
-              <IconButton
-                aria-label="LinkedIn"
-                onClick={() => window.open("https://www.linkedin.com")}
-              >
-                <LinkedInIcon style={{ color: "#9d4eddff" }} />
-              </IconButton>
-              <IconButton
-                aria-label="Github"
-                onClick={() => window.open("https://github.com/kayzersozee")}
-              >
-                <GitHubIcon style={{ color: "#9d4eddff" }} />
-              </IconButton>
-              <IconButton
-                aria-label="Facebook"
-                onClick={() => window.open("https://www.facebook.com")}
-              >
-                <FacebookIcon style={{ color: "#9d4eddff" }} />
-              </IconButton>
-            </Grid>
+        
+        <Grid container direction="row" justify="center" align="center">
+          <Grid item xs={12} md={12} lg={12} xl={12}>
+            <IconButton
+              aria-label="LinkedIn"
+              onClick={() => window.open("https://www.linkedin.com")}
+            >
+              <LinkedInIcon style={{ color: "#9d4eddff" }} />
+            </IconButton>
+            <IconButton
+              aria-label="Github"
+              onClick={() => window.open("https://github.com/kayzersozee")}
+            >
+              <GitHubIcon style={{ color: "#9d4eddff" }} />
+            </IconButton>
+            <IconButton
+              aria-label="Facebook"
+              onClick={() => window.open("https://www.facebook.com")}
+            >
+              <FacebookIcon style={{ color: "#9d4eddff" }} />
+            </IconButton>
           </Grid>
         </Grid>
       </Grid>
