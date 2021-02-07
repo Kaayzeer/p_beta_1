@@ -23,18 +23,20 @@ export default function Me() {
         <Typography variant="body2" color="primary" component="p">
           {gitList.bio} Right now i live in {gitList.location}
         </Typography>
-        <Typography variant="h1" color="primary" component="h3">
-          1
-        </Typography>
-        <Typography variant="body1" color="primary" component="p">
-          Year of experience
-        </Typography>
-        <Typography variant="h1" color="primary" component="h3">
-          3
-        </Typography>
-        <Typography variant="body1" color="primary" component="p">
-          Completed projects
-        </Typography>
+        <Grid item xs={12} sm={6} md={4} lg={4}>
+          <Typography variant="h1" color="primary" component="h3">
+            1
+          </Typography>
+          <Typography variant="body1" color="primary" component="p">
+            Year of experience
+          </Typography>
+          <Typography variant="h1" color="primary" component="h3">
+            3
+          </Typography>
+          <Typography variant="body1" color="primary" component="p">
+            Completed projects
+          </Typography>
+        </Grid>
       </Grid>
 
       <Grid item xs={12} sm={8} md={4} lg={4} xl={6}>

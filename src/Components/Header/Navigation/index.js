@@ -1,51 +1,89 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
+import { withRouter } from 'react-router-dom';
 
-const StyledUL = styled.ul`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  list-style: none;
-`;
 
-const StyledLi = styled.li`
-  padding: 10px;
-  color: var(--dark-orchid);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-family: "Montserrat";
+const useStyles = makeStyles((theme) => ({
+    root: {
+        flexGrow: 1,
+    },
+    menuButton: {
+        marginRight: theme.spacing(2),
+    },
+    title: {
+        flexGrow: 1,
+    },
+}));
 
-  a {
-    text-decoration: none;
-  }
-  a:link,
-  a:visited {
-    color: var(--dark-orchid);
-  }
-  a:hover {
-    color: var(--dark-orchid);
-  }
-  a:active {
-    color: var(--dark-orchid);
-  }
-`;
+const Navbar = props => {
+    const { history } = props;
+    const classes = useStyles();
+    const [menu, setMenu] = React.useState(null);
+    const open = Boolean(menu);
 
-function index() {
-  return (
-    <StyledUL>
-      <StyledLi>
-        <Link to="/">Home</Link>
-      </StyledLi>
-      <StyledLi>
-        <Link to="/about">About</Link>
-      </StyledLi>
-      <StyledLi>
-        <Link to="/projects">Projects</Link>
-      </StyledLi>
-    </StyledUL>
-  );
+    const handleMenu = (event) => {
+    
+        setMenu(event.currentTarget);
+    };
+
+    const handleMenuClick = newPage => {
+        history.push(newPage)
+        setMenu(null);
+    };
+
+    return (
+      <div className={classes.root}>
+        <AppBar position="static" color="transparent">
+          <Toolbar>
+            <Typography variant="h6" className={classes.title}></Typography>
+            <div>
+              <IconButton
+                onClick={handleMenu}
+                edge="start"
+                className={classes.menuButton}
+                color="inherit"
+                aria-label="menu"
+              >
+                <MenuIcon style={{ color: "#9d4eddff" }} />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                menu={menu}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                open={open}
+                onClose={() => setMenu(null)}
+              >
+                <MenuItem onClick={() => handleMenuClick("/")}>Home</MenuItem>
+                <MenuItem onClick={() => handleMenuClick("/about")}>
+                  About
+                </MenuItem>
+                <MenuItem onClick={() => handleMenuClick("/projects")}>
+                  Projects
+                </MenuItem>
+                <MenuItem onClick={() => handleMenuClick("/contact")}>
+                  Contact
+                </MenuItem>
+              </Menu>
+            </div>
+          </Toolbar>
+        </AppBar>
+      </div>
+    );
 }
 
-export default index;
+export default withRouter(Navbar);
