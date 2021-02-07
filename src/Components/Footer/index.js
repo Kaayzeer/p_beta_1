@@ -10,14 +10,8 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import UseStyles from "./Usestyles";
 
 const StyledFooter = styled.footer`
-/* display: flex;  
-  width: 100%;  
- justify-content: center; */
   margin-top: 2rem; 
   margin-bottom: 2rem;
-  /* background-color: var(--baby-powder); */
-  /* background: linear-gradient(135deg, #90e0efff 0%, #e0aaffff 100%); */
-  /* color: var(--dark-orchid); */
   overflow:hidden;
 `;
 

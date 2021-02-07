@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {makeStyles, Typography} from "@material-ui/core/";
+import {Typography} from "@material-ui/core/";
 import Button from "@material-ui/core/Button";
 import SpaRoundedIcon from "@material-ui/icons/SpaRounded";
 
@@ -13,10 +13,10 @@ const StyledHome = styled.main`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   background: linear-gradient(135deg, #90e0efff 0%, #e0aaffff 100%);
 
-  h1 {
+  h2 {
     font-size: 80px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -76,9 +76,9 @@ function Index() {
     <StyledHome>
       <SmallLine></SmallLine>
       <Typography 
-      variant='h1' 
+      variant='h2' 
       color='secondary' 
-      component='h1'
+      component='h2'
       
       >Nikolas Rosinelli</Typography>
       <SpaRoundedIcon color='secondary'/>

@@ -14,28 +14,40 @@ const theme = createMuiTheme({
   typography: {
     fontFamily: "Times New Roman",
 
+    h2: {
+      fontSize: "2.5rem",
+      letterSpacing: "1.5px",
+      marginTop: "3vh",
+      marginBottom: "1vh",
+    },
+
     h1: {
+      fontFamily: "Montserrat",
       fontSize: "2.5rem",
       letterSpacing: "1.5px",
       marginTop: "3vh",
       marginBottom: "1vh",
     },
     h3: {
+      fontFamily: "Montserrat",
       fontSize: "1.8rem",
       letterSpacing: "0.01em",
       marginTop: "1.0rem",
     },
     body1: {
+      fontFamily: "Montserrat",
       fontSize: "1.5rem",
       letterSpacing: "0.01em",
       marginTop: "0.2rem",
     },
     body2: {
+      fontFamily: "Montserrat",
       fontSize: "1.0rem",
       letterSpacing: "0.01em",
       marginTop: "0.2rem",
     },
     h4: {
+      fontFamily: "Montserrat",
       marginTop: "10%",
     },
     // h1 - h4 is styling for about me components

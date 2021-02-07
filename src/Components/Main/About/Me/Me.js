@@ -20,16 +20,16 @@ export default function Me() {
         <Typography variant="h1" color="primary" component="h1">
           about me
         </Typography>
-        <Typography variant="body1" color="primary" component="p">
+        <Typography variant="body2" color="primary" component="p">
           {gitList.bio} Right now i live in {gitList.location}
         </Typography>
-        <Typography variant="h3" color="primary" component="h3">
+        <Typography variant="h1" color="primary" component="h3">
           1
         </Typography>
         <Typography variant="body1" color="primary" component="p">
           Year of experience
         </Typography>
-        <Typography variant="h3" color="primary" component="h3">
+        <Typography variant="h1" color="primary" component="h3">
           3
         </Typography>
         <Typography variant="body1" color="primary" component="p">

@@ -15,6 +15,8 @@ const StyledLi = styled.li`
   color: var(--dark-orchid);
   letter-spacing: 1px;
   text-transform: uppercase;
+  font-family: "Montserrat";
+
   a {
     text-decoration: none;
   }
