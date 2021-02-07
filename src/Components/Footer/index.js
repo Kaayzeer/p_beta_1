@@ -6,14 +6,23 @@ import Grid from "@material-ui/core/Grid";
 import {Typography} from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-
 import UseStyles from "./Usestyles";
 
 const StyledFooter = styled.footer`
-  margin-top: 2rem; 
-  margin-bottom: 2rem;
+  
+  padding: 20px;
   overflow:hidden;
+  
+  
 `;
+/* const Line = styled.div`
+  background: #0096c7ff;
+  height: 2px;
+  width: 9%;
+  margin: auto;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+`; */
 
 function Footer() {
   const classes = UseStyles();
@@ -26,7 +35,7 @@ function Footer() {
         direction="column"
         alignItems="center"
         justify="center"
-        spacing={3}
+        /* spacing={3} */
       >
         <Grid item xs={12} sm={12} md={12} lg={12} xl={10}>
           <Typography
@@ -38,11 +47,12 @@ function Footer() {
             Have a project in mind?
           </Typography>
         </Grid>
+        
         <Grid item xs={12} sm={12} md={10} lg={10} xl={10}>
           <Typography
             variant="body2"
             color="primary"
-            component="body2"
+            component="p"
             style={{ color: "#0096c7ff" }}
           >
             Lets build it together! Contact on socials

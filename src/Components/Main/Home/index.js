@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {Typography} from "@material-ui/core/";
+import {Typography, makeStyles} from "@material-ui/core/";
 import Button from "@material-ui/core/Button";
 import SpaRoundedIcon from "@material-ui/icons/SpaRounded";
 
@@ -21,7 +21,6 @@ const StyledHome = styled.main`
     font-weight: 400;
     letter-spacing: 1px;
     margin-bottom: 28px;
-   
 
     @media only screen and (max-width: 600px) {
       font-size: 40px;
@@ -51,27 +50,25 @@ const SmallLine = styled.div`
   height: 2px;
   width: 120px;
   margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 
   @media only screen and (max-width: 600px) {
     width: 70px;
   }
 `;
 
-/* const useStyles = makeStyles((theme) => ({
-  typography: {
-    h1: {
-      fontSize: "80px",
-      fontWeight: "400",
-      letterSpacing: "1px",
-      marginBottom: "28px",
+const useStyles = makeStyles((theme) => ({
+    Button: {
+      backgroundColor: "transparent", 
+      color: "white",
+      marginTop: "2%",
     },
-  },
-})); */
+  
+}));
 
 function Index() {
-  /* const classes = useStyles() */
+  const classes = useStyles()
   return (
     <StyledHome>
       <SmallLine></SmallLine>
@@ -85,9 +82,9 @@ function Index() {
       <Typography variant='body1' color='secondary' component='p'>Web Developer</Typography>
       <SmallLine></SmallLine>
       <Button
-        style={{ backgroundColor: "transparent", color: "white" }}
+       className={classes.Button}
         size="small"
-        onClick={() => alert("Skickas till mitt CV sen")}
+        onClick={() => alert("En modal med mitt CV kommer öppnas snart")}
         variant="contained"
       >
         CV

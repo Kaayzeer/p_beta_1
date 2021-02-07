@@ -4,15 +4,17 @@ const UseStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     color: theme.palette.text.primary,
+    width: '100%',
+    height: '100vh',
   },
   AssignmentTurnedInRoundedIcon: {
     margin: "5px",
   },
   paper: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(3),
     textAlign: "center",
     color: theme.palette.text.primary,
-    borderRadius: "2%",
+    borderRadius: "4%",
   },
   img: {
     borderRadius: "2%",

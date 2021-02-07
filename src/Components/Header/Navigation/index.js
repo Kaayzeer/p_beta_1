@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     title: {
         flexGrow: 1,
     },
+    
 }));
 
 const Navbar = props => {
@@ -75,9 +76,7 @@ const Navbar = props => {
                 <MenuItem onClick={() => handleMenuClick("/projects")}>
                   Projects
                 </MenuItem>
-                <MenuItem onClick={() => handleMenuClick("/contact")}>
-                  Contact
-                </MenuItem>
+                
               </Menu>
             </div>
           </Toolbar>
