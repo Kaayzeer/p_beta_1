@@ -13,7 +13,8 @@ const StyledFooter = styled.footer`
 /* display: flex;  
   width: 100%;  
  justify-content: center; */
-  margin-top: 10px; 
+  margin-top: 2rem; 
+  margin-bottom: 2rem;
   /* background-color: var(--baby-powder); */
   /* background: linear-gradient(135deg, #90e0efff 0%, #e0aaffff 100%); */
   /* color: var(--dark-orchid); */
@@ -33,9 +34,9 @@ function Footer() {
         justify="center"
         spacing={3}
       >
-        <Grid item xs={12} sm={12} md={10} lg={10} xl={10}>
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={10}>
           <Typography
-            variant="h1"
+            variant="h3"
             color="primary"
             component="h1"
             style={{ color: "#0096c7ff" }}
@@ -43,7 +44,7 @@ function Footer() {
             Have a project in mind?
           </Typography>
         </Grid>
-        
+        <Grid item xs={12} sm={12} md={10} lg={10} xl={10}>
           <Typography
             variant="body2"
             color="primary"
@@ -52,7 +53,7 @@ function Footer() {
           >
             Lets build it together! Contact on socials
           </Typography>
-        
+        </Grid>
         <Grid container direction="row" justify="center" align="center">
           <Grid item xs={12} md={12} lg={12} xl={12}>
             <IconButton

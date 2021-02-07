@@ -43,7 +43,7 @@ export default function PortfolioCard() {
                 >
                   {repo.description}
                 </Typography>
-                <Typography variant="body1" color="textSecondary" component="p">
+                <Typography variant="body2" color="textSecondary" component="p">
                   last updated: {repo.updated_at}
                 </Typography>
               </CardContent>

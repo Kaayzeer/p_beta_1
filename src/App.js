@@ -10,7 +10,6 @@ const theme = createMuiTheme({
     secondary: {
       main: "#fffffcff",
     },
-    
   }, // h1 - h4 is styling for about me components
   typography: {
     fontFamily: "Times New Roman",
@@ -22,20 +21,29 @@ const theme = createMuiTheme({
       marginBottom: "1vh",
     },
     h3: {
-      fontSize: "1.5rem",
+      fontSize: "1.8rem",
       letterSpacing: "0.01em",
-      marginTop: "10%",
+      marginTop: "1.0rem",
     },
     body1: {
       fontSize: "1.5rem",
       letterSpacing: "0.01em",
-      marginTop: "15px",
+      marginTop: "0.2rem",
+    },
+    body2: {
+      fontSize: "1.0rem",
+      letterSpacing: "0.01em",
+      marginTop: "0.2rem",
     },
     h4: {
       marginTop: "10%",
     },
     // h1 - h4 is styling for about me components
-    h3: {},
+    h5: {
+      marginTop: "0.2rem",
+      fontSize: "1.2rem",
+      letterSpacing: "0,01em",
+    },
   },
 });
 function App() {

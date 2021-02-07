@@ -16,7 +16,7 @@ export default function Me() {
 
   return (
     <Grid container direction="row" justify="space-evenly" spacing={3}>
-      <Grid item xs={12} md={6} lg={6}>
+      <Grid item xs={12} sm={6} md={4} lg={4}>
         <Typography variant="h1" color="primary" component="h1">
           about me
         </Typography>
@@ -37,7 +37,7 @@ export default function Me() {
         </Typography>
       </Grid>
 
-      <Grid item xs={12} md={6} lg={6} xl={6}>
+      <Grid item xs={12} sm={8} md={4} lg={4} xl={6}>
         <img src={myImage} className={classes.img} alt="" />
       </Grid>
     </Grid>

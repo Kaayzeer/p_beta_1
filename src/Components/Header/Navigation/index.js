@@ -42,9 +42,6 @@ function index() {
       <StyledLi>
         <Link to="/projects">Projects</Link>
       </StyledLi>
-      <StyledLi>
-        <Link to="/contact">Contact</Link>
-      </StyledLi>
     </StyledUL>
   );
 }

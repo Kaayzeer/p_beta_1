@@ -1,4 +1,4 @@
-import Contact from "./Contact";
+
 import Home from "./Home";
 import Projects from "./Projects";
 import About from "./About";
@@ -35,9 +35,6 @@ function Index() {
             <Projects />
           </Route>
 
-          <Route path="/contact">
-            <Contact />
-          </Route>
         </Switch>
       </StyledMain>
     

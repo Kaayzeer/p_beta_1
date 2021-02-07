@@ -13,6 +13,7 @@ function Index() {
         <Me />
         <Box mt={10}></Box>
         <Papers />
+        <Box mt={5}></Box>
       </Grid>
     </Container>
   );
