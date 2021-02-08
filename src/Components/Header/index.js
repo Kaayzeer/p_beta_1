@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const StyledHeader = styled.header`
   background-color: var(--baby-powder);
-  overflow:hidden,
+  /* overflow:hidden, */
 `;
 
 function Header() {

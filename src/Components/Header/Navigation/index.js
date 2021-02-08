@@ -56,7 +56,7 @@ const Navbar = props => {
               </IconButton>
               <Menu
                 id="menu-appbar"
-                menu={menu}
+                anchorEl={menu}
                 anchorOrigin={{
                   vertical: "top",
                   horizontal: "right",
