@@ -3,6 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import UseStyles from "./UseStyles";
 import GithubCard from "./Github/";
+import FigmaCard from './Figma'
 import { Typography } from "@material-ui/core";
 
 function Index() {
@@ -22,6 +23,7 @@ function Index() {
       </Grid>
 
       <GithubCard />
+      <FigmaCard />
     </Container>
   );
 }

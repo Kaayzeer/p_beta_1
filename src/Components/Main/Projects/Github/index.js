@@ -10,6 +10,59 @@ import stairs from "../../../../Photos/stairs.jpg";
 import Grid from "@material-ui/core/Grid";
 import UseStyles from "../UseStyles";
 
+
+
+function FadilGit() {
+  const classes = UseStyles();
+  
+  return (
+    <Grid container direction="row" justify="center" spacing={3}>
+      <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+        <Card className={classes.root}>
+          <CardActionArea>
+            <CardMedia
+              className={classes.media}
+              image={stairs}
+              title="portfolio"
+            />
+
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                React platform
+              </Typography>
+              <Typography variant="body1" color="textSecondary" component="h3">
+                A project in working progress
+              </Typography>
+              <Typography
+                variant="body2"
+                color="textSecondary"
+                component="p"
+              ></Typography>
+            </CardContent>
+          </CardActionArea>
+
+          <CardActions>
+            <Grid container justify="flex-end">
+              <Button
+                size="small"
+                color="primary"
+                href='"https://github.com/FaaDiiL/todo"'
+              >
+                Github
+              </Button>
+
+              {/* <Button size="small" color="primary">
+                    Demo
+                  </Button> */}
+            </Grid>
+          </CardActions>
+        </Card>
+      </Grid>
+    </Grid>
+  );
+}
+
+
 export default function GithubCard() {
   const classes = UseStyles();
   const [gitRepo, setGitRepo] = useState([]);
@@ -22,47 +75,54 @@ export default function GithubCard() {
 
   return (
     <Grid container direction="row" justify="center" spacing={3}>
-      {gitRepo.filter(repos => repos.description !== null).map((repo) => (
-        <Grid key={repo.id} item xs={12} sm={6} md={4} lg={4} xl={4}>
-          <Card className={classes.root}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image={stairs}
-                title="portfolio"
-              />
+      {gitRepo
+        .filter((repos) => repos.description !== null)
+        .map((repo) => (
+          <Grid key={repo.id} item xs={12} sm={6} md={4} lg={4} xl={4}>
+            <Card className={classes.root}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image={stairs}
+                  title="portfolio"
+                />
 
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  {repo.name}
-                </Typography>
-                <Typography
-                  variant="body1"
-                  color="textSecondary"
-                  component="h3"
-                >
-                  {repo.description}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  last updated: {repo.updated_at}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    {repo.name}
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    color="textSecondary"
+                    component="h3"
+                  >
+                    {repo.description}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    last updated: {repo.updated_at}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
 
-            <CardActions>
-              <Grid container justify="flex-end">
-                <Button size="small" color="primary" href={repo.html_url}>
-                  Github
-                </Button>
+              <CardActions>
+                <Grid container justify="flex-end">
+                  <Button size="small" color="primary" href={repo.html_url}>
+                    Github
+                  </Button>
 
-                <Button size="small" color="primary">
-                  Demo
-                </Button>
-              </Grid>
-            </CardActions>
-          </Card>
-        </Grid>
-      ))}
+                  <Button size="small" color="primary">
+                    Demo
+                  </Button>
+                </Grid>
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
+      <FadilGit />
     </Grid>
   );
 }
