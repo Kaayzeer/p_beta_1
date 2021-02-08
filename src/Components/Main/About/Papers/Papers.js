@@ -9,7 +9,7 @@ export default function Papers() {
   const Icon2 = AssignmentTurnedInRoundedIcon;
   return (
     <Grid container spacing={4} direction="row" justify="center">
-      <Grid item xs={12} sm={10} md={8} lg={6} xl={6}>
+      <Grid item xs={12} sm={10} md={8} lg={6} xl={6} >
         <Paper className={classes.paper} elevation={3}>
           <Typography variant="h3" color="primary" component="h3">
             <Icon1 style={{ color: "#9d4eddff" }} />
@@ -27,7 +27,7 @@ export default function Papers() {
         </Paper>
       </Grid>
       {/* first and second paper breakpoint*/}
-      <Grid item xs={12} sm={10} md={8} lg={6}>
+      <Grid item xs={12} sm={10} md={8} lg={6} >
         <Paper className={classes.paper} elevation={3}>
           <Typography variant="h3" color="primary" component="h3">
             <Icon2 style={{ color: "#9d4eddff" }} />

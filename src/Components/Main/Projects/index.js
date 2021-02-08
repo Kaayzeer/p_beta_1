@@ -1,9 +1,8 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-
 import Container from "@material-ui/core/Container";
 import UseStyles from "./UseStyles";
-import PortfolioCard from "./Card/card";
+import GithubCard from "./Github/";
 import { Typography } from "@material-ui/core";
 
 function Index() {
@@ -22,7 +21,7 @@ function Index() {
         </Grid>
       </Grid>
 
-      <PortfolioCard />
+      <GithubCard />
     </Container>
   );
 }

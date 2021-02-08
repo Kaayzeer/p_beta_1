@@ -11,8 +11,8 @@ import UseStyles from "./Usestyles";
 const StyledFooter = styled.footer`
   
   padding: 20px;
-  overflow:hidden;
-  
+  /* overflow:hidden; */
+  position: static;
   
 `;
 /* const Line = styled.div`

@@ -4,8 +4,9 @@ const UseStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     color: theme.palette.text.primary,
-    width: '100%',
-    height: '100vh',
+    width: "100%",
+    height: "70vh",
+    /* overflow: 'scroll', */
   },
   AssignmentTurnedInRoundedIcon: {
     margin: "5px",
@@ -15,6 +16,7 @@ const UseStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: theme.palette.text.primary,
     borderRadius: "4%",
+    display: 'block',
   },
   img: {
     borderRadius: "2%",
@@ -22,6 +24,7 @@ const UseStyles = makeStyles((theme) => ({
     width: "100%",
     marginTop: "30px",
   },
+
 }));
 
 export default UseStyles;

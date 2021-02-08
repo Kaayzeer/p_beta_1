@@ -10,7 +10,7 @@ import stairs from "../../../../Photos/stairs.jpg";
 import Grid from "@material-ui/core/Grid";
 import UseStyles from "../UseStyles";
 
-export default function PortfolioCard() {
+export default function GithubCard() {
   const classes = UseStyles();
   const [gitRepo, setGitRepo] = useState([]);
 
