@@ -21,9 +21,8 @@ function Index() {
           </Typography>
         </Grid>
       </Grid>
-
       <GithubCard />
-      <FigmaCard />
+      
     </Container>
   );
 }

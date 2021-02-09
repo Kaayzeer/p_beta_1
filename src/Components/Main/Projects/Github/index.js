@@ -9,58 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import stairs from "../../../../Photos/stairs.jpg";
 import Grid from "@material-ui/core/Grid";
 import UseStyles from "../UseStyles";
-
-
-
-function FadilGit() {
-  const classes = UseStyles();
-  
-  return (
-    <Grid container direction="row" justify="center" spacing={3}>
-      <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={stairs}
-              title="portfolio"
-            />
-
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                React platform
-              </Typography>
-              <Typography variant="body1" color="textSecondary" component="h3">
-                A project in working progress
-              </Typography>
-              <Typography
-                variant="body2"
-                color="textSecondary"
-                component="p"
-              ></Typography>
-            </CardContent>
-          </CardActionArea>
-
-          <CardActions>
-            <Grid container justify="flex-end">
-              <Button
-                size="small"
-                color="primary"
-                href='"https://github.com/FaaDiiL/todo"'
-              >
-                Github
-              </Button>
-
-              {/* <Button size="small" color="primary">
-                    Demo
-                  </Button> */}
-            </Grid>
-          </CardActions>
-        </Card>
-      </Grid>
-    </Grid>
-  );
-}
+import FigmaCard from '../Figma';
 
 
 export default function GithubCard() {
@@ -83,7 +32,7 @@ export default function GithubCard() {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image={stairs}
+                  image="https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2dyYW1taW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
                   title="portfolio"
                 />
 
@@ -91,20 +40,14 @@ export default function GithubCard() {
                   <Typography gutterBottom variant="h5" component="h2">
                     {repo.name}
                   </Typography>
-                  <Typography
-                    variant="body1"
-                    color="textSecondary"
-                    component="h3"
-                  >
+                  <Typography variant="h5" color="textSecondary" component="p">
                     {repo.description}
                   </Typography>
                   <Typography
-                    variant="body2"
+                    variant="body1"
                     color="textSecondary"
                     component="p"
-                  >
-                    last updated: {repo.updated_at}
-                  </Typography>
+                  ></Typography>
                 </CardContent>
               </CardActionArea>
 
@@ -122,7 +65,7 @@ export default function GithubCard() {
             </Card>
           </Grid>
         ))}
-      <FadilGit />
+        <FigmaCard />
     </Grid>
   );
 }

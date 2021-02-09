@@ -6,7 +6,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import souperb from "../../../../Photos/souperb.jpg";
+import souperb from "../../../../Photos/souperb.gif";
 import Grid from "@material-ui/core/Grid";
 import UseStyles from "../UseStyles";
 
@@ -24,13 +24,7 @@ export default function FigmaCard() {
   }, []); */
 
   return (
-    <Grid
-      container
-      direction="row"
-      justify="center"
-      spacing={3}
-      className={classes.root}
-    >
+    
       <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
         <Card>
           <CardActionArea>
@@ -68,6 +62,6 @@ export default function FigmaCard() {
           </CardActions>
         </Card>
       </Grid>
-    </Grid>
+    
   );
 }
