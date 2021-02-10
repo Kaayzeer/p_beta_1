@@ -9,20 +9,13 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import UseStyles from "./Usestyles";
 
 const StyledFooter = styled.footer`
-  
   padding: 20px;
-  /* overflow:hidden; */
+  overflow: hidden;
   position: static;
-  
+  box-shadow: 3px 3px 3px 3px #b1a7a6ff;
+  margin-top: 10px;
+  /* background: linear-gradient(135deg, #90e0efff 0%, #e0aaffff 100%); */
 `;
-/* const Line = styled.div`
-  background: #0096c7ff;
-  height: 2px;
-  width: 9%;
-  margin: auto;
-  margin-top: 0.1rem;
-  margin-bottom: 0.1rem;
-`; */
 
 function Footer() {
   const classes = UseStyles();
@@ -35,7 +28,7 @@ function Footer() {
         direction="column"
         alignItems="center"
         justify="center"
-        /* spacing={3} */
+        spacing={3}
       >
         <Grid item xs={12} sm={12} md={12} lg={12} xl={10}>
           <Typography
@@ -43,17 +36,19 @@ function Footer() {
             color="primary"
             component="h1"
             style={{ color: "#0096c7ff" }}
+            className={classes.h3}
           >
             Have a project in mind?
           </Typography>
         </Grid>
-        
+
         <Grid item xs={12} sm={12} md={10} lg={10} xl={10}>
           <Typography
             variant="body2"
             color="primary"
             component="p"
             style={{ color: "#0096c7ff" }}
+            className={classes.body2}
           >
             Lets build it together! Contact on socials
           </Typography>

@@ -6,7 +6,6 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import stairs from "../../../../Photos/stairs.jpg";
 import Grid from "@material-ui/core/Grid";
 import UseStyles from "../UseStyles";
 import FigmaCard from '../Figma';
@@ -32,7 +31,7 @@ export default function GithubCard() {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2dyYW1taW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                  image="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzF8fHByb2dyYW1taW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
                   title="portfolio"
                 />
 
@@ -65,7 +64,7 @@ export default function GithubCard() {
             </Card>
           </Grid>
         ))}
-        <FigmaCard />
+      <FigmaCard />
     </Grid>
   );
 }

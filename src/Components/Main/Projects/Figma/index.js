@@ -34,7 +34,7 @@ export default function FigmaCard() {
               <Typography gutterBottom variant="h5" component="h2">
                 Souperb
               </Typography>
-              <Typography variant="body1" color="textSecondary" component="h3">
+              <Typography variant="h5" color="textSecondary" component="p">
                 Prototype made in Figma
               </Typography>
               <Typography

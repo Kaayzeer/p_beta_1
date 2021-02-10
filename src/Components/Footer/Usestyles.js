@@ -1,23 +1,26 @@
-
 import { makeStyles } from "@material-ui/core/styles";
 
 const UseStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    color: "theme.palette.text.primary",
-    minHeight: "10vh",
-    /* marginTop: '2rem', */
+    minHeight: "20vh",
   },
-
-  /* media: {
-    height: 140,
-    opacity: "0.5",
-  }, */
-  
-
-  /* IconButton: {
-    fontSize: "2.5rem",
-  }, */
+  h3: {
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1.4rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.2rem",
+    },
+  },
+  body2: {
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1.0rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "0.8rem",
+    },
+  },
 }));
 
 export default UseStyles;

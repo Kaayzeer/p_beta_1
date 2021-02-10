@@ -15,12 +15,12 @@ function Index() {
 
   return (
     <StyledAbout>
-      <Container maxwidth="lg" className={classes.root}>
+      <Container className={classes.root}>
         <Grid container direction="column" align="center">
           <Me />
-          <Box mt={10}></Box>
-          <Papers />
           <Box mt={5}></Box>
+          <Papers />
+          <Box mt={2}></Box>
         </Grid>
       </Container>
     </StyledAbout>

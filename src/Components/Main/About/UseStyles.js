@@ -5,18 +5,16 @@ const UseStyles = makeStyles((theme) => ({
     flexGrow: 1,
     color: theme.palette.text.primary,
     width: "100%",
-    height: "70vh",
+    /* height: "70vh", */
     /* overflow: 'scroll', */
   },
-  AssignmentTurnedInRoundedIcon: {
-    margin: "5px",
-  },
+
   paper: {
     padding: theme.spacing(3),
     textAlign: "center",
     color: theme.palette.text.primary,
     borderRadius: "4%",
-    display: 'block',
+    display: "block",
   },
   img: {
     borderRadius: "2%",
@@ -24,7 +22,46 @@ const UseStyles = makeStyles((theme) => ({
     width: "100%",
     marginTop: "30px",
   },
-
+  h1: {
+    [theme.breakpoints.down("md")]: {
+      fontSize: "2.2rem",
+      letterSpacing: "1.2px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.8rem",
+      letterSpacing: "0.8px",
+    },
+  },
+  body1: {
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1.3rem",
+      letterSpacing: "0.03rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.1rem",
+      letterSpacing: "0.04rem",
+    },
+  },
+  h3: {
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1.5rem",
+      letterSpacing: "0.03rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.2rem",
+      letterSpacing: "0.04rem",
+    },
+  },
+  h5: {
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1.3rem",
+      letterSpacing: "0.03rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.1rem",
+      letterSpacing: "0.04rem",
+    },
+  },
 }));
 
 export default UseStyles;

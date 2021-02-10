@@ -36,7 +36,6 @@ const StyledHome = styled.main`
     text-transform: uppercase;
     letter-spacing: 7px;
     margin-top: 30px;
-
     @media only screen and (max-width: 600px) {
       font-size: 16px;
       font-weight: 400;

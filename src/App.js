@@ -10,7 +10,9 @@ const theme = createMuiTheme({
     secondary: {
       main: "#fffffcff",
     },
-  }, // h1 - h4 is styling for about me components
+  },
+
+  // h1 - h4 is styling for about me components
   typography: {
     fontFamily: "Times New Roman",
 
@@ -19,6 +21,7 @@ const theme = createMuiTheme({
       letterSpacing: "1.5px",
       marginTop: "3vh",
       marginBottom: "1vh",
+      
     },
 
     h1: {
