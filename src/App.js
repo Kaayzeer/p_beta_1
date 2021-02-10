@@ -2,6 +2,7 @@ import Components from "./Components/";
 import GlobalStyle from "./GlobalStyle";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
+
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -64,8 +65,10 @@ const theme = createMuiTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Components />
-      <GlobalStyle />
+      
+        <Components />
+        <GlobalStyle />
+      
     </ThemeProvider>
   );
 }

@@ -4,10 +4,10 @@ const UseStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     color: "theme.palette.text.primary",
-    background: "transparent",
+    background: "#fffffcff",
     minHeight: "310px",
   },
-  
+
   mediaRoot: {
     maxWidth: 300,
   },
@@ -25,10 +25,9 @@ const UseStyles = makeStyles((theme) => ({
   body1: {
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.1rem",
-      marginTop: '1.0rem',
+      marginTop: "1.0rem",
     },
   },
-  
 }));
 
 export default UseStyles;

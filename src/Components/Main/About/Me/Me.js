@@ -2,6 +2,18 @@ import { Grid, Typography } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
 import useStyles from "../UseStyles";
 import myImage from "../../../../Photos/Nikos_edited_00-6.jpg";
+import styled from "styled-components";
+
+const SmallLine = styled.div`
+  background: linear-gradient(135deg, #90e0efff 0%, #e0aaffff 100%);
+  height: 2px;
+  width: 120px;
+  margin: 10px;
+
+  @media only screen and (max-width: 600px) {
+    width: 70px;
+  }
+`;
 
 export default function Me() {
   const classes = useStyles();
@@ -17,30 +29,56 @@ export default function Me() {
   return (
     <Grid container direction="row" justify="space-evenly" spacing={3}>
       <Grid item xs={8} sm={6} md={4} lg={4}>
-        <Typography variant="h1" color="primary" component="h1" className={classes.h1}>
+        <Typography
+          variant="h1"
+          color="primary"
+          component="h1"
+          className={classes.h1}
+        >
           about me
         </Typography>
+        <SmallLine></SmallLine>
         <Typography variant="body2" color="primary" component="p">
           {gitList.bio} Right now i live in {gitList.location}
         </Typography>
         <Grid item xs={12} sm={6} md={6} lg={4}>
-          <Typography variant="h1" color="primary" component="h3" className={classes.h1}>
+          <Typography
+            variant="h1"
+            color="primary"
+            component="h3"
+            className={classes.h1}
+          >
             1
           </Typography>
-          <Typography variant="body1" color="primary" component="p" className={classes.body1}>
+          <Typography
+            variant="body1"
+            color="primary"
+            component="p"
+            className={classes.body1}
+          >
             Year of experience
           </Typography>
-          <Typography variant="h1" color="primary" component="h3" className={classes.h1}>
+          <Typography
+            variant="h1"
+            color="primary"
+            component="h3"
+            className={classes.h1}
+          >
             3
           </Typography>
-          <Typography variant="body1" color="primary" component="p" className={classes.body1}>
+          <Typography
+            variant="body1"
+            color="primary"
+            component="p"
+            className={classes.body1}
+          >
             Completed projects
           </Typography>
         </Grid>
       </Grid>
 
       <Grid item xs={12} sm={8} md={5} lg={4} xl={6}>
-        <img src={myImage} className={classes.img}  alt="" />
+        <img src={myImage} className={classes.img} alt="" />
       </Grid>
     </Grid>
   );

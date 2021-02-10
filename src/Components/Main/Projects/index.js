@@ -4,6 +4,18 @@ import Container from "@material-ui/core/Container";
 import UseStyles from "./UseStyles";
 import GithubCard from "./Github/";
 import { Typography } from "@material-ui/core";
+import styled from "styled-components";
+
+const SmallLine = styled.div`
+  background: linear-gradient(135deg, #90e0efff 0%, #e0aaffff 100%);
+  height: 2px;
+  width: 120px;
+  margin: 10px;
+
+  @media only screen and (max-width: 600px) {
+    width: 70px;
+  }
+`;
 
 function Index() {
   const classes = UseStyles();
@@ -26,6 +38,7 @@ function Index() {
           >
             my projects
           </Typography>
+          <SmallLine />
           <Typography
             variant="h1"
             color="primary"

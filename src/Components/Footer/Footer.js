@@ -12,8 +12,8 @@ const StyledFooter = styled.footer`
   padding: 20px;
   overflow: hidden;
   position: static;
-  box-shadow: 3px 3px 3px 3px #b1a7a6ff;
-  margin-top: 10px;
+  box-shadow: 0px 4px 4px 5px #b1a7a6ff;
+  /* margin-top: 10px; */
   /* background: linear-gradient(135deg, #90e0efff 0%, #e0aaffff 100%); */
 `;
 

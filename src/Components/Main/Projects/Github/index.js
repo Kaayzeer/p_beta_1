@@ -11,15 +11,22 @@ import UseStyles from "../UseStyles";
 import FigmaCard from '../Figma';
 
 
+
 export default function GithubCard() {
   const classes = UseStyles();
+
+  
+
   const [gitRepo, setGitRepo] = useState([]);
+
 
   useEffect(() => {
     fetch("https://api.github.com/users/kayzersozee/repos")
       .then((response) => response.json())
       .then((data) => setGitRepo(data));
   }, []);
+  
+
 
   return (
     <Grid container direction="row" justify="center" spacing={3}>
@@ -55,10 +62,14 @@ export default function GithubCard() {
                   <Button size="small" color="primary" href={repo.html_url}>
                     Github
                   </Button>
-
-                  <Button size="small" color="primary">
-                    Demo
-                  </Button>
+                  {repo.has_pages ? (
+                    <Button
+                      key={repo.id}
+                      href={`https://kayzersozee.github.io/${repo.name}/`}
+                    >
+                      Demo 
+                    </Button>
+                  ) : null}
                 </Grid>
               </CardActions>
             </Card>

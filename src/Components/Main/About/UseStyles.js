@@ -13,7 +13,7 @@ const UseStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
     textAlign: "center",
     color: theme.palette.text.primary,
-    borderRadius: "4%",
+    /* borderRadius: "4%", */
     display: "block",
   },
   img: {
