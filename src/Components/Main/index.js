@@ -13,7 +13,7 @@ const StyledMain = styled.main`
   display: flex;
   justify-content: center;
   width: 100%;
-  min-height: 70vh;
+  min-height: 100vh;
   background: var(--baby-powder);
   overflow: hidden;
 `;

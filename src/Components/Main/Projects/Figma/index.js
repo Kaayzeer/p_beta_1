@@ -17,7 +17,7 @@ export default function FigmaCard() {
   
   return (
     <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
-      <Card className={classes.root}>
+      <Card>
         <CardActionArea>
           <CardMedia
             image="https://images.unsplash.com/photo-1547780543-62be494335cf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzZ8fHNvdXB8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
@@ -32,27 +32,23 @@ export default function FigmaCard() {
             <Typography variant="h5" color="textSecondary" component="p">
               Prototype made in Figma
             </Typography>
-            <Typography
-              variant="body2"
-              color="textSecondary"
-              component="p"
-            ></Typography>
+            
           </CardContent>
         </CardActionArea>
 
         <CardActions>
           <Grid container justify="flex-end">
-            <Button
-              size="small"
-              color="primary"
-              href="https://www.figma.com/proto/gj44C5BS2zAU4c59Y6UyYx/Individuell-uppgift-online-soup-delivery?node-id=71:0&scaling=min-zoom"
-            >
-              Demo
-            </Button>
-
-            {/* <Button size="small" color="primary">
+            {
+              <Button
+                size="small"
+                color="primary"
+                href="https://www.figma.com/proto/gj44C5BS2zAU4c59Y6UyYx/Individuell-uppgift-online-soup-delivery?node-id=71:0&scaling=min-zoom"
+              >
                 Demo
-              </Button> */}
+              </Button>
+            }
+
+            
           </Grid>
         </CardActions>
       </Card>

@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const UseStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    minHeight: "20vh",
+    /* minHeight: "20vh", */
   },
   h3: {
     [theme.breakpoints.down("md")]: {

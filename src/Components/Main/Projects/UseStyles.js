@@ -5,6 +5,7 @@ const UseStyles = makeStyles((theme) => ({
     flexGrow: 1,
     color: "theme.palette.text.primary",
     background: "#fffffcff",
+    
     minHeight: "310px",
   },
 
@@ -12,7 +13,7 @@ const UseStyles = makeStyles((theme) => ({
     maxWidth: 300,
   },
   media: {
-    height: 140,
+    height: 400,
   },
   img: {
     height: 300,

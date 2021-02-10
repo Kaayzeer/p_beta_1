@@ -10,7 +10,8 @@ import UseStyles from "./Usestyles";
 
 const StyledFooter = styled.footer`
   padding: 20px;
-  overflow: hidden;
+  margin-top: 15px;
+  /* overflow: hidden; */
   position: static;
   box-shadow: 0px 4px 4px 5px #b1a7a6ff;
   /* margin-top: 10px; */

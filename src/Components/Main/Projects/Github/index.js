@@ -29,12 +29,18 @@ export default function GithubCard() {
 
 
   return (
-    <Grid container direction="row" justify="center" spacing={3}>
+    <Grid
+      container
+      className={classes.root}
+      direction="row"
+      justify="center"
+      spacing={2}
+    >
       {gitRepo
         .filter((repos) => repos.description !== null)
         .map((repo) => (
           <Grid key={repo.id} item xs={12} sm={6} md={4} lg={4} xl={4}>
-            <Card className={classes.root}>
+            <Card>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
@@ -49,11 +55,7 @@ export default function GithubCard() {
                   <Typography variant="h5" color="textSecondary" component="p">
                     {repo.description}
                   </Typography>
-                  <Typography
-                    variant="body1"
-                    color="textSecondary"
-                    component="p"
-                  ></Typography>
+                  
                 </CardContent>
               </CardActionArea>
 
@@ -67,7 +69,7 @@ export default function GithubCard() {
                       key={repo.id}
                       href={`https://kayzersozee.github.io/${repo.name}/`}
                     >
-                      Demo 
+                      Demo
                     </Button>
                   ) : null}
                 </Grid>
