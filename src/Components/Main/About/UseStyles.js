@@ -24,11 +24,11 @@ const UseStyles = makeStyles((theme) => ({
   },
   h1: {
     [theme.breakpoints.down("md")]: {
-      fontSize: "2.2rem",
+      fontSize: "1.5rem",
       letterSpacing: "1.2px",
     },
     [theme.breakpoints.down("sm")]: {
-      fontSize: "1.8rem",
+      fontSize: "1.3rem",
       letterSpacing: "0.8px",
     },
   },

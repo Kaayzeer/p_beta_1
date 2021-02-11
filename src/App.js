@@ -1,6 +1,7 @@
-import Components from "./Components/";
 import GlobalStyle from "./GlobalStyle";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import Components from './Components'
+
 
 
 const theme = createMuiTheme({
@@ -20,14 +21,13 @@ const theme = createMuiTheme({
     h2: {
       fontSize: "2.5rem",
       letterSpacing: "1.5px",
-      marginTop: "3vh",
       marginBottom: "1vh",
       
     },
 
     h1: {
       fontFamily: "Montserrat",
-      fontSize: "2.5rem",
+      fontSize: "1.8rem",
       letterSpacing: "1.5px",
       marginTop: "3vh",
       marginBottom: "1vh",
@@ -36,7 +36,7 @@ const theme = createMuiTheme({
       fontFamily: "Montserrat",
       fontSize: "1.8rem",
       letterSpacing: "0.01em",
-      marginTop: "1.0rem",
+      /* marginTop: "1.0rem", */
     },
     body1: {
       fontFamily: "Montserrat",
@@ -64,12 +64,12 @@ const theme = createMuiTheme({
 });
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      
+    
+      <ThemeProvider theme={theme}>
         <Components />
         <GlobalStyle />
-      
-    </ThemeProvider>
+      </ThemeProvider>
+   
   );
 }
 

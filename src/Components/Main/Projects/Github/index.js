@@ -12,6 +12,7 @@ import FigmaCard from '../Figma';
 
 
 
+
 export default function GithubCard() {
   const classes = UseStyles();
 
@@ -39,13 +40,14 @@ export default function GithubCard() {
       {gitRepo
         .filter((repos) => repos.description !== null)
         .map((repo) => (
-          <Grid key={repo.id} item xs={12} sm={6} md={4} lg={4} xl={4}>
+          <Grid key={repo.id} item xs={10} sm={6} md={4} lg={4} xl={4}>
             <Card>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
                   image="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzF8fHByb2dyYW1taW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
                   title="portfolio"
+                  
                 />
 
                 <CardContent>

@@ -1,22 +1,19 @@
-import { Grid, Paper, Typography } from "@material-ui/core";
-import AssignmentTurnedInRoundedIcon from "@material-ui/icons/AssignmentTurnedInRounded";
-import BusinessCenterRoundedIcon from "@material-ui/icons/BusinessCenterRounded";
+import { Grid, Paper, Typography} from "@material-ui/core";
 import useStyles from "../UseStyles";
 
 
 export default function Papers() {
   const classes = useStyles();
-  const Icon1 = BusinessCenterRoundedIcon;
-  const Icon2 = AssignmentTurnedInRoundedIcon;
+  
   return (
     <Grid container spacing={4} direction="row" justify="center">
-      <Grid item xs={12} sm={10} md={8} lg={6} xl={6}>
+      
+      <Grid item xs={12} sm={10} md={4} lg={4} xl={6}>
         <Paper className={classes.paper} elevation={0}>
           <Typography variant="h3" color="primary" component="h3">
-            <Icon1 style={{ color: "#9d4eddff" }} />
+            
             studies
           </Typography>
-          
 
           <Typography variant="h5" color="primary" component="h5">
             front end developer with ui/ux
@@ -24,16 +21,19 @@ export default function Papers() {
           <Typography variant="body2" color="primary" component="p">
             student at the moment
           </Typography>
-          {/* <Typography variant="body1" color="primary" component="p">
-            September 2020 - June 2022
-          </Typography> */}
+          
         </Paper>
       </Grid>
       {/* first and second paper breakpoint*/}
-      <Grid item xs={12} sm={10} md={8} lg={6}>
+      <Grid item xs={12} sm={10} md={4} lg={4}>
         <Paper className={classes.paper} elevation={0}>
-          <Typography variant="h3" color="primary" component="h3">
-            <Icon2 style={{ color: "#9d4eddff" }} />
+          <Typography
+            variant="h3"
+            color="primary"
+            /* style={{ color: "#9d4eddff" }} */
+            component="h3"
+          >
+            
             experiences
           </Typography>
           <Typography variant="h5" color="primary" component="h5">
@@ -42,9 +42,7 @@ export default function Papers() {
           <Typography variant="body2" color="primary" component="p">
             inside and outside of school
           </Typography>
-          {/* <Typography variant="body2" color="primary" component="p">
-            September 2020 -
-          </Typography> */}
+          
         </Paper>
       </Grid>
     </Grid>

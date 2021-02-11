@@ -9,16 +9,14 @@ function Index() {
   const classes = useStyles();
 
   return (
-    
-      <Container className={classes.root}>
-        <Grid container direction="column" align="center">
-          <Me />
-          <Box mt={5}></Box>
-          <Papers />
-          <Box mt={2}></Box>
-        </Grid>
-      </Container>
-    
+    <Container className={classes.root}>
+      <Grid container direction="column" align="center">
+        <Me />
+        <Box mt={5}></Box>
+        <Papers />
+        {/* <Box mt={2}></Box> */}
+      </Grid>
+    </Container>
   );
 }
 

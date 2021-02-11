@@ -13,7 +13,7 @@ const StyledFooter = styled.footer`
   margin-top: 15px;
   /* overflow: hidden; */
   position: static;
-  box-shadow: 0px 4px 4px 5px #b1a7a6ff;
+  box-shadow: 0px -1.8px 7px  #b1a7a6ff;
   /* margin-top: 10px; */
   /* background: linear-gradient(135deg, #90e0efff 0%, #e0aaffff 100%); */
 `;

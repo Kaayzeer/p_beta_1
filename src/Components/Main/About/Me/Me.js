@@ -28,7 +28,7 @@ export default function Me() {
 
   return (
     <Grid container direction="row" justify="space-evenly" spacing={3}>
-      <Grid item xs={8} sm={6} md={4} lg={4}>
+      <Grid item xs={8} sm={7} md={4} lg={4}>
         <Typography
           variant="h1"
           color="primary"
@@ -41,43 +41,45 @@ export default function Me() {
         <Typography variant="body2" color="primary" component="p">
           {gitList.bio} Right now i live in {gitList.location}
         </Typography>
-        <Grid item xs={12} sm={6} md={6} lg={4}>
-          <Typography
-            variant="h1"
-            color="primary"
-            component="h3"
-            className={classes.h1}
-          >
-            1
-          </Typography>
-          <Typography
-            variant="body1"
-            color="primary"
-            component="p"
-            className={classes.body1}
-          >
-            Year of experience
-          </Typography>
-          <Typography
-            variant="h1"
-            color="primary"
-            component="h3"
-            className={classes.h1}
-          >
-            3
-          </Typography>
-          <Typography
-            variant="body1"
-            color="primary"
-            component="p"
-            className={classes.body1}
-          >
-            Completed projects
-          </Typography>
+        <Grid container justify="center">
+          <Grid item xs={12} sm={12} md={10} lg={8}>
+            <Typography
+              variant="h1"
+              color="primary"
+              component="h3"
+              className={classes.h1}
+            >
+              1
+            </Typography>
+            <Typography
+              variant="body1"
+              color="primary"
+              component="p"
+              className={classes.body1}
+            >
+              Year of experience
+            </Typography>
+            <Typography
+              variant="h1"
+              color="primary"
+              component="h3"
+              className={classes.h1}
+            >
+              3
+            </Typography>
+            <Typography
+              variant="body1"
+              color="primary"
+              component="p"
+              className={classes.body1}
+            >
+              Completed projects
+            </Typography>
+          </Grid>
         </Grid>
       </Grid>
 
-      <Grid item xs={12} sm={8} md={5} lg={4} xl={6}>
+      <Grid item xs={9} sm={6} md={3} lg={3} xl={3}>
         <img src={myImage} className={classes.img} alt="" />
       </Grid>
     </Grid>
