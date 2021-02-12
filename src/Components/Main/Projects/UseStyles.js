@@ -6,7 +6,7 @@ const UseStyles = makeStyles((theme) => ({
     color: "theme.palette.text.primary",
     background: "#fffffcff" /* "grey", */,
     marginBottom: "5px",
-    minHeight: "300px",
+    minHeight: "200px",
   },
 
   button: {
@@ -32,11 +32,9 @@ const UseStyles = makeStyles((theme) => ({
     maxWidth: 300,
   },
   media: {
-    height: 300,
-  },
-  img: {
     height: 200,
   },
+
   h1: {
     [theme.breakpoints.down("md")]: {
       fontSize: "1.7rem",
