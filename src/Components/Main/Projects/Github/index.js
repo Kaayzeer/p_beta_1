@@ -8,7 +8,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import UseStyles from "../UseStyles";
-import FigmaCard from '../Figma';
+
 
 
 
@@ -30,13 +30,7 @@ export default function GithubCard() {
 
 
   return (
-    <Grid
-      container
-      className={classes.root}
-      direction="row"
-      justify="center"
-      spacing={2}
-    >
+    <>
       {gitRepo
         .filter((repos) => repos.description !== null)
         .map((repo) => (
@@ -45,9 +39,8 @@ export default function GithubCard() {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzF8fHByb2dyYW1taW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                  image="https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
                   title="portfolio"
-                  
                 />
 
                 <CardContent>
@@ -57,18 +50,23 @@ export default function GithubCard() {
                   <Typography variant="h5" color="textSecondary" component="p">
                     {repo.description}
                   </Typography>
-                  
                 </CardContent>
               </CardActionArea>
 
               <CardActions>
                 <Grid container justify="flex-end">
-                  <Button size="small" color="primary" href={repo.html_url}>
+                  <Button
+                    className={classes.button}
+                    size="small"
+                    color="primary"
+                    href={repo.html_url}
+                  >
                     Github
                   </Button>
                   {repo.has_pages ? (
                     <Button
                       key={repo.id}
+                      className={classes.button}
                       href={`https://kayzersozee.github.io/${repo.name}/`}
                     >
                       Demo
@@ -79,7 +77,7 @@ export default function GithubCard() {
             </Card>
           </Grid>
         ))}
-      <FigmaCard />
-    </Grid>
+      
+    </>
   );
 }

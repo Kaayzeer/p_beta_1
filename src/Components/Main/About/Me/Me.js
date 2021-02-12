@@ -28,7 +28,7 @@ export default function Me() {
 
   return (
     <Grid container direction="row" justify="space-evenly" spacing={3}>
-      <Grid item xs={8} sm={7} md={4} lg={4}>
+      <Grid item xs={10} sm={7} md={4} lg={4}>
         <Typography
           variant="h1"
           color="primary"
@@ -42,7 +42,7 @@ export default function Me() {
           {gitList.bio} Right now i live in {gitList.location}
         </Typography>
         <Grid container justify="center">
-          <Grid item xs={12} sm={12} md={10} lg={8}>
+          <Grid item xs={12} sm={12} md={12} lg={12}>
             <Typography
               variant="h1"
               color="primary"
@@ -52,7 +52,7 @@ export default function Me() {
               1
             </Typography>
             <Typography
-              variant="body1"
+              variant="body2"
               color="primary"
               component="p"
               className={classes.body1}
@@ -68,7 +68,7 @@ export default function Me() {
               3
             </Typography>
             <Typography
-              variant="body1"
+              variant="body2"
               color="primary"
               component="p"
               className={classes.body1}

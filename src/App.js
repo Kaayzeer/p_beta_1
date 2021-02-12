@@ -22,12 +22,11 @@ const theme = createMuiTheme({
       fontSize: "2.5rem",
       letterSpacing: "1.5px",
       marginBottom: "1vh",
-      
     },
 
     h1: {
       fontFamily: "Montserrat",
-      fontSize: "1.8rem",
+      fontSize: "1.9rem",
       letterSpacing: "1.5px",
       marginTop: "3vh",
       marginBottom: "1vh",
@@ -36,11 +35,11 @@ const theme = createMuiTheme({
       fontFamily: "Montserrat",
       fontSize: "1.8rem",
       letterSpacing: "0.01em",
-      /* marginTop: "1.0rem", */
+      padding: ".4rem",
     },
     body1: {
       fontFamily: "Montserrat",
-      fontSize: "1.5rem",
+      fontSize: "1.7rem",
       letterSpacing: "0.01em",
       marginTop: "0.2rem",
     },
@@ -56,9 +55,15 @@ const theme = createMuiTheme({
     },
     // h1 - h4 is styling for about me components
     h5: {
+      fontFamily: "Montserrat",
       marginTop: "0.2rem",
       fontSize: "1.2rem",
       letterSpacing: "0,01em",
+    },
+
+    button: {
+      fontFamily: "Open Sans",
+      textTransform: "lowercase",
     },
   },
 });

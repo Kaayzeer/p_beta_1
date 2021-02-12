@@ -5,8 +5,6 @@ const UseStyles = makeStyles((theme) => ({
     flexGrow: 1,
     color: theme.palette.text.primary,
     width: "100%",
-    /* height: "70vh", */
-    /* overflow: 'scroll', */
   },
 
   paper: {
@@ -20,19 +18,19 @@ const UseStyles = makeStyles((theme) => ({
     borderRadius: "2%",
     boxShadow: "1px 1px 5px 2px var(--light-gray)",
     width: "100%",
-    marginTop: "30px",
+    marginTop: "20px",
   },
   h1: {
     [theme.breakpoints.down("md")]: {
-      fontSize: "1.5rem",
+      fontSize: "1.7rem",
       letterSpacing: "1.2px",
     },
     [theme.breakpoints.down("sm")]: {
-      fontSize: "1.3rem",
+      fontSize: "1.5rem",
       letterSpacing: "0.8px",
     },
   },
-  body1: {
+  body2: {
     [theme.breakpoints.down("md")]: {
       fontSize: "1.3rem",
       letterSpacing: "0.03rem",
@@ -49,16 +47,6 @@ const UseStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.2rem",
-      letterSpacing: "0.04rem",
-    },
-  },
-  h5: {
-    [theme.breakpoints.down("md")]: {
-      fontSize: "1.3rem",
-      letterSpacing: "0.03rem",
-    },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "1.1rem",
       letterSpacing: "0.04rem",
     },
   },

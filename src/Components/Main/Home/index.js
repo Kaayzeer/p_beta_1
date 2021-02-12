@@ -7,7 +7,6 @@ import SpaRoundedIcon from "@material-ui/icons/SpaRounded";
 
 
 const StyledHome = styled.main`
-  /*  padding: 10px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,6 +26,12 @@ const StyledHome = styled.main`
       letter-spacing: 1px;
       margin-bottom: 28px;
     }
+    @media only screen and (max-width: 350px) {
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
   }
 
   p {
@@ -35,6 +40,7 @@ const StyledHome = styled.main`
     text-transform: uppercase;
     letter-spacing: 7px;
     margin-top: 30px;
+    
     @media only screen and (max-width: 600px) {
       font-size: 16px;
       font-weight: 400;

@@ -15,43 +15,48 @@ import UseStyles from "../UseStyles";
 export default function FigmaCard() {
   const classes = UseStyles();
   
-  return (
-    <Grid item xs={10} sm={6} md={4} lg={4} xl={4}>
-      <Card>
-        <CardActionArea>
-          <CardMedia
-            image="https://images.unsplash.com/photo-1547780543-62be494335cf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzZ8fHNvdXB8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            title="portfolio"
-            className={classes.media}
-          />
+    return (
+     
+      <Grid item xs={10} sm={6} md={4} lg={4} xl={4}>
+        
+        <Card>
+          <CardActionArea>
+            <CardMedia
+              image="https://images.unsplash.com/photo-1547780543-62be494335cf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzZ8fHNvdXB8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              title="portfolio"
+              className={classes.media}
+            />
 
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              Souperb
-            </Typography>
-            <Typography variant="h5" color="textSecondary" component="p">
-              Prototype made in Figma
-            </Typography>
-            
-          </CardContent>
-        </CardActionArea>
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                Souperb
+              </Typography>
+              <Typography variant="h5" color="textSecondary" component="p">
+                Prototype made in Figma
+              </Typography>
+            </CardContent>
+          </CardActionArea>
 
-        <CardActions>
-          <Grid container justify="flex-end">
-            {
-              <Button
-                size="small"
-                color="primary"
-                href="https://www.figma.com/proto/gj44C5BS2zAU4c59Y6UyYx/Individuell-uppgift-online-soup-delivery?node-id=71:0&scaling=min-zoom"
-              >
-                Demo
-              </Button>
-            }
+          <CardActions>
+            <Grid container justify="flex-end">
+              {
+                <Button
+                  className={classes.button}
+                  size="small"
+                  color="primary"
+                  href="https://www.figma.com/proto/gj44C5BS2zAU4c59Y6UyYx/Individuell-uppgift-online-soup-delivery?node-id=71:0&scaling=min-zoom"
+                >
+                  Demo
+                </Button>
+              }
+            </Grid>
+          </CardActions>
+        </Card>
+        
+      </Grid>
+    
 
-            
-          </Grid>
-        </CardActions>
-      </Card>
-    </Grid>
-  );
+    );
+    
+  
 }

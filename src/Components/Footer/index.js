@@ -10,12 +10,9 @@ import UseStyles from "./Usestyles";
 
 const StyledFooter = styled.footer`
   padding: 20px;
-  margin-top: 15px;
-  /* overflow: hidden; */
   position: static;
-  box-shadow: 0px -1.8px 7px  #b1a7a6ff;
-  /* margin-top: 10px; */
-  /* background: linear-gradient(135deg, #90e0efff 0%, #e0aaffff 100%); */
+  box-shadow: 0px 0px px  #b1a7a6ff;
+ 
 `;
 
 function Footer() {
