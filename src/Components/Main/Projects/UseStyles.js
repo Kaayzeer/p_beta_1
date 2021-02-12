@@ -35,24 +35,24 @@ const UseStyles = makeStyles((theme) => ({
     height: 200,
   },
 
-  h1: {
+  h5: {
     [theme.breakpoints.down("md")]: {
-      fontSize: "1.7rem",
+      fontSize: "1.4rem",
     },
     [theme.breakpoints.down("sm")]: {
-      fontSize: "1.5rem",
+      fontSize: "1.2rem",
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize: "1.3rem",
+      fontSize: "0.9rem",
     },
   },
-  body1: {
+  body2: {
     [theme.breakpoints.down("md")]: {
-      fontSize: "1.5rem",
+      fontSize: "1.6rem",
       marginTop: "1.0rem",
     },
     [theme.breakpoints.down("sm")]: {
-      fontSize: "1.3rem",
+      fontSize: "1.4rem",
       marginTop: "1.0rem",
     },
     [theme.breakpoints.down("xs")]: {

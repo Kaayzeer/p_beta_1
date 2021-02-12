@@ -16,9 +16,7 @@ export default function FigmaCard() {
   const classes = UseStyles();
   
     return (
-     
       <Grid item xs={10} sm={6} md={4} lg={4} xl={4}>
-        
         <Card>
           <CardActionArea>
             <CardMedia
@@ -28,10 +26,20 @@ export default function FigmaCard() {
             />
 
             <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
+              <Typography
+                className={classes.h5}
+                gutterBottom
+                variant="h5"
+                component="h2"
+              >
                 Souperb
               </Typography>
-              <Typography variant="h5" color="textSecondary" component="p">
+              <Typography
+                className={classes.body2}
+                variant="h5"
+                color="textSecondary"
+                component="p"
+              >
                 Prototype made in Figma
               </Typography>
             </CardContent>
@@ -52,10 +60,7 @@ export default function FigmaCard() {
             </Grid>
           </CardActions>
         </Card>
-        
       </Grid>
-    
-
     );
     
   

@@ -44,10 +44,20 @@ export default function GithubCard() {
                 />
 
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
+                  <Typography
+                    gutterBottom
+                    className={classes.h5}
+                    variant="h5"
+                    component="h2"
+                  >
                     {repo.name}
                   </Typography>
-                  <Typography variant="h5" color="textSecondary" component="p">
+                  <Typography
+                    variant="h5"
+                    className={classes.body2}
+                    color="textSecondary"
+                    component="p"
+                  >
                     {repo.description}
                   </Typography>
                 </CardContent>
@@ -77,7 +87,6 @@ export default function GithubCard() {
             </Card>
           </Grid>
         ))}
-      
     </>
   );
 }
