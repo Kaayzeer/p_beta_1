@@ -27,10 +27,10 @@ const StyledHome = styled.main`
       margin-bottom: 28px;
     }
     @media only screen and (max-width: 350px) {
-      font-size: 40px;
+      font-size: 34px;
       font-weight: 400;
       letter-spacing: 1px;
-      margin-bottom: 18px;
+      padding-bottom: 1px;
     }
   }
 
@@ -40,11 +40,15 @@ const StyledHome = styled.main`
     text-transform: uppercase;
     letter-spacing: 7px;
     margin-top: 30px;
-    
+
     @media only screen and (max-width: 600px) {
       font-size: 16px;
       font-weight: 400;
       letter-spacing: 4px;
+    }
+    @media only screen and (max-width: 350px) {
+      font-size: 12px;
+      padding-top: 5px;
     }
   }
 `;
@@ -59,6 +63,12 @@ const SmallLine = styled.div`
 
   @media only screen and (max-width: 600px) {
     width: 70px;
+  }
+  @media only screen and (max-width: 350px) {
+    width: 70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
   }
 `;
 

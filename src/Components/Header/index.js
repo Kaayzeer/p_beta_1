@@ -20,7 +20,22 @@ const useStyles = makeStyles((theme) => ({
     title: {
         flexGrow: 1,
     },
-    
+    item: {
+      
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1.3rem",
+      letterSpacing: "0.03rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.1rem",
+      letterSpacing: "0.04rem",
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "0.8rem",
+      letterSpacing: "0.04rem",
+      
+    },
+  },
 }));
 
 const Navbar = props => {
@@ -69,14 +84,24 @@ const Navbar = props => {
                 open={open}
                 onClose={() => setMenu(null)}
               >
-                <MenuItem onClick={() => handleMenuClick("/")}>Home</MenuItem>
-                <MenuItem onClick={() => handleMenuClick("/about")}>
+                <MenuItem
+                  className={classes.item}
+                  onClick={() => handleMenuClick("/")}
+                >
+                  Home
+                </MenuItem>
+                <MenuItem
+                  className={classes.item}
+                  onClick={() => handleMenuClick("/about")}
+                >
                   About
                 </MenuItem>
-                <MenuItem onClick={() => handleMenuClick("/projects")}>
+                <MenuItem
+                  className={classes.item}
+                  onClick={() => handleMenuClick("/projects")}
+                >
                   Projects
                 </MenuItem>
-                
               </Menu>
             </div>
           </Toolbar>

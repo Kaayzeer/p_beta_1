@@ -27,7 +27,7 @@ const UseStyles = makeStyles((theme) => ({
       padding: "0rem",
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize: "0.7rem",
+      fontSize: "0.74rem",
       padding: "0rem",
     },
   },

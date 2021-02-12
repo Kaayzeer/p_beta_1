@@ -11,8 +11,9 @@ import UseStyles from "./Usestyles";
 const StyledFooter = styled.footer`
   padding: 20px;
   position: static;
-  box-shadow: 0px 0px px  #b1a7a6ff;
- 
+  box-shadow: 0px 0px px #b1a7a6ff;
+
+  
 `;
 
 function Footer() {
@@ -36,7 +37,7 @@ function Footer() {
             style={{ color: "#0096c7ff" }}
             className={classes.h3}
           >
-            Have a project in mind?
+            have a project in mind?
           </Typography>
         </Grid>
 
@@ -48,7 +49,7 @@ function Footer() {
             style={{ color: "#0096c7ff" }}
             className={classes.body2}
           >
-            Lets build it together! Contact on socials
+            lets build it together! contact on socials
           </Typography>
         </Grid>
         <Grid container direction="row" justify="center" align="center">

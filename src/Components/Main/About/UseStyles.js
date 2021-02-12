@@ -7,12 +7,9 @@ const UseStyles = makeStyles((theme) => ({
     width: "100%",
   },
 
-  paper: {
-    padding: theme.spacing(3),
-    textAlign: "center",
-    color: theme.palette.text.primary,
-    /* borderRadius: "4%", */
-    display: "block",
+  studies: {
+   paddingTop: '5px',
+    
   },
   img: {
     borderRadius: "2%",
@@ -39,14 +36,23 @@ const UseStyles = makeStyles((theme) => ({
       fontSize: "1.1rem",
       letterSpacing: "0.04rem",
     },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "0.8rem",
+      letterSpacing: "0.04rem",
+      
+    },
   },
   h3: {
     [theme.breakpoints.down("md")]: {
-      fontSize: "1.5rem",
+      fontSize: "1.6rem",
       letterSpacing: "0.03rem",
     },
     [theme.breakpoints.down("sm")]: {
-      fontSize: "1.2rem",
+      fontSize: "1.4rem",
+      letterSpacing: "0.04rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.25rem",
       letterSpacing: "0.04rem",
     },
   },

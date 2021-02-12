@@ -79,7 +79,7 @@ export default function Me() {
         </Grid>
       </Grid>
 
-      <Grid item xs={9} sm={6} md={3} lg={3} xl={3}>
+      <Grid item xs={9} sm={6} md={4} lg={3} xl={3}>
         <img src={myImage} className={classes.img} alt="" />
       </Grid>
     </Grid>
