@@ -13,10 +13,11 @@ import UseStyles from "../UseStyles";
 
 
 export default function FigmaCard() {
+  
   const classes = UseStyles();
   
     return (
-      <Grid item xs={10} sm={6} md={4} lg={4} xl={4}>
+       <Grid item xs={10} sm={6} md={4} lg={4} xl={4}>
         <Card>
           <CardActionArea>
             <CardMedia
@@ -61,7 +62,9 @@ export default function FigmaCard() {
           </CardActions>
         </Card>
       </Grid>
-    );
-    
-  
-}
+      
+      )
+    }
+      
+      
+   

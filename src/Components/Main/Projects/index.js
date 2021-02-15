@@ -1,4 +1,4 @@
-import React/* , {useState} */ from "react";
+import React, {useState} from "react";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import UseStyles from "./UseStyles";
@@ -21,18 +21,34 @@ const SmallLine = styled.div`
 function Index() {
   const classes = UseStyles();
 
-  /* const [uxProjects, setUxProjects] = useState[false] 
+const [allProjects, setAllProjects] = useState(true) 
 
- const handleChange = () =>{
-   setUxProjects(prev => !prev);
+   const [uxProjects, setUxProjects] = useState(false) 
+
+ const [githubProjects, setGithubProjects] = useState(false)
+
+
+ const handleChangeUx = () =>{
+    setGithubProjects(false);
+    setUxProjects(true);
+ }
+
+ 
+ const handleChangeGit = () =>{
+  setUxProjects(false);
+
+  setGithubProjects(true);
+  }
+  
+  const handleChangeAll = () =>{
+    setAllProjects(true)
     
-  } */
-
+    }   
  
 
 
   return (
-    
+ 
       <Container maxWidth="lg" className={classes.root}>
         <Grid
           container
@@ -61,7 +77,7 @@ function Index() {
             </Typography>
             <Button
               onClick={() => {
-                alert("filter funktion kommer");
+               handleChangeAll() 
               }}
               className={classes.button}
               color="primary"
@@ -70,7 +86,7 @@ function Index() {
             </Button>
             <Button
               onClick={() => {
-                alert("filter funktion kommer");
+               handleChangeGit()
               }}
               className={classes.button}
               color="primary"
@@ -79,7 +95,7 @@ function Index() {
             </Button>
             <Button
               onClick={() => {
-                alert('filter funktion kommer')
+                handleChangeUx()
               }}
               className={classes.button}
               color="primary"
@@ -95,11 +111,16 @@ function Index() {
           justify="center"
           spacing={2}
         >
-          <GithubCard />
-          <FigmaCard />
+
+          {
+          githubProjects ? <GithubCard/> 
+          :uxProjects ? <FigmaCard />
+          :allProjects ? <GithubCard/> || <FigmaCard /> : null
+        }
+         
         </Grid>
       </Container>
-    
+      
   );
 }
 
