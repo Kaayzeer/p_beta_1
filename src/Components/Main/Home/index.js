@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import {Typography, makeStyles} from "@material-ui/core/";
+import { Typography, makeStyles } from "@material-ui/core/";
 import Button from "@material-ui/core/Button";
 import SpaRoundedIcon from "@material-ui/icons/SpaRounded";
-
-
+import Modal from "./Modal";
 
 const StyledHome = styled.main`
   display: flex;
@@ -68,41 +67,42 @@ const SmallLine = styled.div`
     width: 70px;
     margin-top: 20px;
     margin-bottom: 20px;
-    
   }
 `;
 
 const useStyles = makeStyles((theme) => ({
-    Button: {
-      backgroundColor: "transparent", 
-      color: "white",
-      marginTop: "2%",
-    },
-  
+  Button: {
+    backgroundColor: "transparent",
+    color: "white",
+    marginTop: "2%",
+  },
 }));
 
 function Index() {
-  const classes = useStyles()
+  const classes = useStyles();
+
+  const [modal, setModal] = useState(false);
+
   return (
     <StyledHome>
       <SmallLine></SmallLine>
-      <Typography 
-      variant='h2' 
-      color='secondary' 
-      component='h2'
-      
-      >Nikolas Rosinelli</Typography>
-      <SpaRoundedIcon color='secondary'/>
-      <Typography variant='body1' color='secondary' component='p'>Web Developer</Typography>
+      <Typography variant="h2" color="secondary" component="h2">
+        Nikolas Rosinelli
+      </Typography>
+      <SpaRoundedIcon color="secondary" />
+      <Typography variant="body1" color="secondary" component="p">
+        Web Developer
+      </Typography>
       <SmallLine></SmallLine>
       <Button
-       className={classes.Button}
+        className={classes.Button}
         size="small"
-        onClick={() => alert("En modal med mitt CV kommer öppnas snart")}
+        onClick={() => setModal(!modal)}
         variant="contained"
       >
         CV
       </Button>
+      {modal && <Modal />}
     </StyledHome>
   );
 }

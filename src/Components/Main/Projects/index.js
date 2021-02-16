@@ -21,9 +21,7 @@ const SmallLine = styled.div`
 function Index() {
   const classes = UseStyles();
 
-const [allProjects, setAllProjects] = useState(true) 
-
-   const [uxProjects, setUxProjects] = useState(false) 
+  const [uxProjects, setUxProjects] = useState(false) 
 
  const [githubProjects, setGithubProjects] = useState(false)
 
@@ -36,16 +34,20 @@ const [allProjects, setAllProjects] = useState(true)
  
  const handleChangeGit = () =>{
   setUxProjects(false);
-
   setGithubProjects(true);
   }
   
   const handleChangeAll = () =>{
-    setAllProjects(true)
-    
+    setGithubProjects(false);
+    setUxProjects(false);
     }   
  
-
+    
+    const allCards = (
+    <> 
+      <GithubCard/> <FigmaCard />
+    </>
+    )
 
   return (
  
@@ -114,9 +116,11 @@ const [allProjects, setAllProjects] = useState(true)
 
           {
           githubProjects ? <GithubCard/> 
-          :uxProjects ? <FigmaCard />
-          :allProjects ? <GithubCard/> || <FigmaCard /> : null
+          :uxProjects ? <FigmaCard /> 
+          :allCards
         }
+
+        
          
         </Grid>
       </Container>
