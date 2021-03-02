@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Button from "@material-ui/core/Button";
+
 import { makeStyles } from "@material-ui/core/";
-import cvmall from "../../../Photos/cvmall.png";
+import newCV from "../../../Photos/newCV.png";
 import CloseIcon from "@material-ui/icons/Close";
 
 const ModalContainer = styled.div`
@@ -13,7 +13,7 @@ const ModalContainer = styled.div`
   background: black;
   top: 0;
   left: 0;
-  opacity: 0.8;
+  opacity: 0.85;
   width: 100%;
   height: 100vh;
 `;
@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
     right: 50,
     top: 0,
     fontSize: "4rem",
+    cursor: 'pointer',
   },
 }));
 
@@ -56,11 +57,11 @@ const Modal = () => {
       {!modal ? (
         <ModalContainer>
           <Modalstyle>
-            <img alt="bild" src={cvmall} />
+            <img alt="bild" src={newCV} />
             <CloseIcon
               className={classes.Button}
               size="small"
-              onClick={() => handleClick()}
+              onClick={handleClick}
               variant="contained"
             ></CloseIcon>
           </Modalstyle>

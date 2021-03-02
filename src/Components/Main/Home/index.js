@@ -75,6 +75,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "transparent",
     color: "white",
     marginTop: "2%",
+    letterSpacing: "3px",
+    padding: "5px",
   },
 }));
 
@@ -96,9 +98,10 @@ function Index() {
       <SmallLine></SmallLine>
       <Button
         className={classes.Button}
-        size="small"
+        size="large"
         onClick={() => setModal(!modal)}
         variant="contained"
+        /* elevation={5} */
       >
         CV
       </Button>
