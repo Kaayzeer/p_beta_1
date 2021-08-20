@@ -56,7 +56,7 @@ function Footer() {
           <Grid item xs={12} md={12} lg={12} xl={12}>
             <IconButton
               aria-label="LinkedIn"
-              onClick={() => window.open("https://www.linkedin.com")}
+              onClick={() => window.open("https://www.linkedin.com/in/nikolas-r-553198216/")}
             >
               <LinkedInIcon style={{ color: "#9d4eddff" }} />
             </IconButton>
