@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import { makeStyles } from "@material-ui/core/";
-import newCV from "../../../Photos/newCV.png";
+import newCV from "../../../Photos/portfolioCV.png";
 import CloseIcon from "@material-ui/icons/Close";
 
 const ModalContainer = styled.div`
