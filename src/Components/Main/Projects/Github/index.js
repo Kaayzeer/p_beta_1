@@ -8,6 +8,9 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import UseStyles from "../UseStyles";
+import askName from '../../../../Photos/ask-name.png'
+import bev from '../../../../Photos/bev2.png'
+import portfolio from '../../../../Photos/portfolio.png'
 
 
 
@@ -39,7 +42,10 @@ export default function GithubCard() {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
+                  image={repo.name == 'ask-name' ? askName 
+                  : repo.name == 'fe20tp2_bev_4' ? bev 
+                  : repo.name == 'nikolas_rosinelli_ip2_fe20' ? portfolio 
+                  : "https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" }
                   title="portfolio"
                 />
 
