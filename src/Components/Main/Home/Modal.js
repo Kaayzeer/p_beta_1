@@ -13,9 +13,9 @@ const ModalContainer = styled.div`
   background: black;
   top: 0;
   left: 0;
-  opacity: 0.85;
+  opacity: 1;
   width: 100%;
-  height: 100vh;
+  height: 95vh;
 `;
 
 const Modalstyle = styled.div`
